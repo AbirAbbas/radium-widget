@@ -1,290 +1,296 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .sub-tab {
-        width: fit-content;
-        height: fit-content;
-        padding: 4px 0px 4px 0px;
-        gap: 10px;
-        stylename: Body 2 / Regular/Desktop;
-        font-family: PP Neue Montreal;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 30px;
-        letter-spacing: -0.01em;
-        text-align: left;
-        cursor: pointer;
-      }
-      .sub-tab-active {
-        border-bottom: 2px solid #ffffff;
-        border: 0px 0px 2px 0px;
-        stylename: Body 2 / Medium/Desktop !important;
-        font-weight: 500 !important;
-      }
-      .main-tab {
-        width: 50%;
-        height: Hug (44px) px;
-        padding: 10px 30px 10px 30px;
-        gap: 10px;
-        opacity: 0px;
-        stylename: Body 3 / Regular/Desktop;
-        font-family: PP Neue Montreal;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        text-align: left;
-        color: #ffffff;
-        text-align: center;
-        cursor: pointer;
-      }
-      .main-tab-active {
-        background: #1b01b8;
-      }
-    </style>
-  </head>
-  <body>
-    <div
-      style="
-        width: auto;
-        height: auto;
-        top: 2243px;
-        gap: 0px;
-        opacity: 0px;
-        background: #000000;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        padding: 10vh;
-      "
-    >
-      <div
-        style="
-          width: 100%;
-          height: 70px;
-          top: 30px;
-          left: 713px;
-          gap: 0px;
-          opacity: 0px;
-          stylename: H2/Desktop;
-          font-family: PP Neue Montreal;
-          font-size: 54px;
-          font-weight: 500;
-          line-height: 70px;
-          letter-spacing: -0.01em;
-          text-align: center;
-          color: #ffffff;
-          justify-items: center;
-          margin-bottom: 7vh;
-        "
-      >
-        Efficiency equates to cost savings
-      </div>
-      <div
-        style="
-          top: 130px;
-          left: 824px;
-          padding: 10px;
-          gap: 10px;
-          border: 1px;
-          opacity: 0px;
-          border: 1px solid #ffffff;
-          display: flex;
-          justify-content: center;
-          justify-items: center;
-          min-width: 30vw;
-        "
-      >
-        <div class="main-tab main-tab-active" id="radium-build">
-          RadiumBuild™
-        </div>
-        <div class="main-tab" id="radium-deploy">RadiumDeploy™</div>
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          max-width: 75%;
-        "
-      >
-        <div
-          style="
+<div class="pricing-calculator" style="flex: auto">
+        <style>
+          .sub-tab {
+            width: fit-content;
+            height: fit-content;
+            padding: 4px 0px 4px 0px;
+            gap: 10px;
+            stylename: Body 2 / Regular/Desktop;
+            font-family: Ppneuemontreal, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            cursor: pointer;
+          }
+          .sub-tab-active {
+            border-bottom: 2px solid #ffffff;
+            border: 0px 0px 2px 0px;
+            stylename: Body 2 / Medium/Desktop !important;
+            font-weight: 500 !important;
+          }
+          .main-tab {
+            width: 50%;
+            height: Hug (44px) px;
+            padding: 10px 30px 10px 30px;
+            gap: 10px;
+            opacity: 0px;
             stylename: Body 3 / Regular/Desktop;
-            font-family: PP Neue Montreal;
+            font-family: Ppneuemontreal, sans-serif;
             font-size: 16px;
             font-weight: 400;
             line-height: 24px;
             letter-spacing: -0.01em;
             text-align: left;
             color: #ffffff;
+            text-align: center;
+            cursor: pointer;
+          }
+          .main-tab-active {
+            background: #1b01b8;
+          }
+        </style>
+        <div
+          style="
+            width: auto;
+            height: auto;
+            top: 2243px;
+            gap: 0px;
+            opacity: 0px;
+            background: #000000;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            padding-top: 16px;
+            padding-bottom: 64px;
           "
         >
-          Explore how Radium affects the usage of common models:
-        </div>
-        <div style="display: flex; flex-direction: row">
           <div
             style="
-              width: 50%;
+              width: 100%;
+              height: 70px;
+              top: 30px;
+              left: 713px;
+              gap: 0px;
+              opacity: 0px;
+              stylename: H2/Desktop;
+              font-family: Ppneuemontreal, sans-serif;
+              font-size: 54px;
+              font-weight: 500;
+              line-height: 70px;
+              letter-spacing: -0.01em;
+              text-align: center;
               color: #ffffff;
+              justify-items: center;
+              margin-bottom: 32px;
+            "
+          >
+            Efficiency equates to cost savings
+          </div>
+          <div
+            style="
+              top: 130px;
+              left: 824px;
+              padding: 10px;
+              gap: 10px;
+              border: 1px;
+              opacity: 0px;
+              border: 1px solid #ffffff;
+              display: flex;
+              justify-content: center;
+              justify-items: center;
+              min-width: 30vw;
+              margin-bottom: 32px;
+            "
+          >
+            <div class="main-tab main-tab-active" id="radium-build">
+              RadiumBuild™
+            </div>
+            <div class="main-tab" id="radium-deploy">RadiumDeploy™</div>
+          </div>
+          <div
+            style="
               display: flex;
               flex-direction: column;
+              width: 100%;
+              max-width: 75%;
             "
           >
             <div
               style="
-                width: 100%;
-                gap: 20px;
-                top: 20px;
-                display: flex;
-                height: fit-content;
-              "
-              id="sub-tabs"
-            ></div>
-            <div
-              style="
-                display: flex;
-                gap: 20px;
-                top: 20px;
-                stylename: Body 4 / Regular/Mobile;
-                font-family: PP Neue Montreal;
-                font-size: 12px;
+                stylename: Body 3 / Regular/Desktop;
+                font-family: Ppneuemontreal, sans-serif;
+                font-size: 16px;
                 font-weight: 400;
-                line-height: 18px;
+                line-height: 24px;
                 letter-spacing: -0.01em;
                 text-align: left;
-                height: fit-content;
-                margin-top: 7vh;
-                padding-right: 2vw;
+                color: #ffffff;
               "
-              id="sub-content"
-            ></div>
-            <div style="display: flex; width: 100%" id="slider-content"></div>
-            <div
-              style="
-                display: flex;
-                display: flex;
-                padding-right: 2vw;
-                margin-top: 5vh;
-              "
-              id="image-table"
-            ></div>
+            >
+              Explore how Radium affects the usage of common models:
+            </div>
+            <div style="display: flex; flex-direction: row">
+              <div
+                style="
+                  width: 50%;
+                  color: #ffffff;
+                  display: flex;
+                  flex-direction: column;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    gap: 20px;
+                    top: 20px;
+                    display: flex;
+                    height: fit-content;
+                  "
+                  id="sub-tabs"
+                ></div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 20px;
+                    top: 20px;
+                    stylename: Body 4 / Regular/Mobile;
+                    font-family: Ppneuemontreal, sans-serif;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
+                    height: fit-content;
+                    margin-top: 7vh;
+                    padding-right: 2vw;
+                  "
+                  id="sub-content"
+                ></div>
+                <div
+                  style="display: flex; width: 100%"
+                  id="slider-content"
+                ></div>
+                <div
+                  style="
+                    display: flex;
+                    display: flex;
+                    padding-right: 2vw;
+                    margin-top: 5vh;
+                  "
+                  id="image-table"
+                ></div>
+              </div>
+              <div style="width: 50%; color: #ffffff" id="graph"></div>
+            </div>
           </div>
-          <div style="width: 50%; color: #ffffff" id="graph"></div>
         </div>
-      </div>
-    </div>
-    <script>
-      const rediumBuild = [
-        {
-          title: "Llama2 Training",
-          name: "Training Llama-2 7B",
-          content:
-            "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-          key: "rb1",
-          awsTime: 32857,
-          awsCost: 1325829,
-          radiumTime: 17414,
-          radiumCost: 522429,
-          radiumTotalTime: 24643,
-          radiumTotalCost: 739286,
-        },
-        {
-          title: "Llama2 Fine Tuning",
-          name: "Fine Tuning Llama-2 7B",
-          content:
-            "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-          key: "rb2",
-          awsTime: 39,
-          awsCost: 1580,
-          radiumTime: 18,
-          radiumCost: 544,
-          radiumTotalTime: 29,
-          radiumTotalCost: 868,
-        },
-        {
-          title: "BERT",
-          name: "BERT (Language Model)",
-          content:
-            "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-          key: "rb2",
-          awsTime: 114,
-          awsCost: 4681,
-          radiumTime: 54,
-          radiumCost: 1611,
-          radiumTotalTime: 86,
-          radiumTotalCost: 2571,
-        },
-        {
-          title: "I3D",
-          name: "3D video Model",
-          content:
-            "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-          key: "rb2",
-          awsTime: 460,
-          awsCost: 18842,
-          radiumTime: 216,
-          radiumCost: 6486,
-          radiumTotalTime: 345,
-          radiumTotalCost: 10350,
-        },
-      ];
-      const rediumDeploy = [
-        {
-          title: "Llama2-13B",
-          name: "Llama2-13B",
-          content:
-            "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
-          awsCost: 7500,
-          awsPrice: 0.75,
-          radiumCost: 2000,
-          radiumPrice: 0.2,
-        },
-        {
-          title: "Llama2–70B",
-          name: "Llama2–70B",
-          content:
-            "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
-          awsCost: 19500,
-          awsPrice: 1.95,
-          radiumCost: 8000,
-          radiumPrice: 0.8,
-        },
-      ];
-      let data = rediumBuild;
-      const rediumBuildDiv = document.getElementById("radium-build");
-      const rediumDeployDiv = document.getElementById("radium-deploy");
-      var sliderMultipler = 1;
-      rediumBuildDiv.addEventListener("click", () => {
-        data = rediumBuild;
-        rediumDeployDiv.classList.remove("main-tab-active");
-        rediumBuildDiv.classList.add("main-tab-active");
-        setInit();
-        showSlider(false);
-      });
+        <script>
+          const rediumBuild = [
+            {
+              title: "Llama2 Training",
+              name: "Training Llama-2 7B",
+              content:
+                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+              key: "rb1",
+              awsTime: 32857,
+              awsCost: 1325829,
+              radiumTime: 17414,
+              radiumCost: 522429,
+              radiumTotalTime: 24643,
+              radiumTotalCost: 739286,
+            },
+            {
+              title: "Llama2 Fine Tuning",
+              name: "Fine Tuning Llama-2 7B",
+              content:
+                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+              key: "rb2",
+              awsTime: 39,
+              awsCost: 1580,
+              radiumTime: 18,
+              radiumCost: 544,
+              radiumTotalTime: 29,
+              radiumTotalCost: 868,
+            },
+            {
+              title: "BERT",
+              name: "BERT (Language Model)",
+              content:
+                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+              key: "rb2",
+              awsTime: 114,
+              awsCost: 4681,
+              radiumTime: 54,
+              radiumCost: 1611,
+              radiumTotalTime: 86,
+              radiumTotalCost: 2571,
+            },
+            {
+              title: "I3D",
+              name: "3D video Model",
+              content:
+                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. \n On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+              key: "rb2",
+              awsTime: 460,
+              awsCost: 18842,
+              radiumTime: 216,
+              radiumCost: 6486,
+              radiumTotalTime: 345,
+              radiumTotalCost: 10350,
+            },
+          ];
 
-      rediumDeployDiv.addEventListener("click", () => {
-        data = rediumDeploy;
-        rediumBuildDiv.classList.remove("main-tab-active");
-        rediumDeployDiv.classList.add("main-tab-active");
-        setInit();
-        showSlider(true);
-      });
-      const showGraph = (item) => {
-        const awsWidth =
-          (item.awsCost * 600) / (item.awsCost + item.radiumCost);
-        const radiumWidth =
-          (item.radiumCost * 600) / (item.awsCost + item.radiumCost);
-        const radiumTotalWidth = item.radiumTotalCost
-          ? (item.radiumTotalCost * 600) / (item.awsCost + item.radiumTotalCost)
-          : radiumWidth;
+          const rediumDeploy = [
+            {
+              title: "Llama2-13B",
+              name: "Llama2-13B",
+              content:
+                "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
+              awsCost: 7500,
+              awsPrice: 0.75,
+              radiumCost: 2000,
+              radiumPrice: 0.2,
+            },
+            {
+              title: "Llama2–70B",
+              name: "Llama2–70B",
+              content:
+                "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
+              awsCost: 19500,
+              awsPrice: 1.95,
+              radiumCost: 8000,
+              radiumPrice: 0.8,
+            },
+          ];
 
-        var svgCode = `
+          let data = rediumBuild;
+          const rediumBuildDiv = document.getElementById("radium-build");
+          const rediumDeployDiv = document.getElementById("radium-deploy");
+          var sliderMultipler = 1;
+          rediumBuildDiv.addEventListener("click", () => {
+            data = rediumBuild;
+            rediumDeployDiv.classList.remove("main-tab-active");
+            rediumBuildDiv.classList.add("main-tab-active");
+            setInit();
+            showSlider(false);
+          });
+
+          rediumDeployDiv.addEventListener("click", () => {
+            data = rediumDeploy;
+            rediumBuildDiv.classList.remove("main-tab-active");
+            rediumDeployDiv.classList.add("main-tab-active");
+            setInit();
+            showSlider(true);
+          });
+
+          function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
+
+          const showGraph = (item) => {
+            const awsWidth =
+              (item.awsCost * 600) / (item.awsCost + item.radiumCost);
+            const radiumWidth =
+              (item.radiumCost * 600) / (item.awsCost + item.radiumCost);
+            const radiumTotalWidth = item.radiumTotalCost
+              ? (item.radiumTotalCost * 600) /
+                (item.awsCost + item.radiumTotalCost)
+              : radiumWidth;
+
+            var svgCode = `
                    <svg
               viewBox="0 0 721 343"
               fill="none"
@@ -310,7 +316,7 @@
                 fill="white"
                 style="
                   stylename: Body 2 / Medium/Desktop;
-                  font-family: PP Neue Montreal;
+                  font-family: Ppneuemontreal, sans-serif;
                   font-size: 20px;
                   font-weight: 500;
                   line-height: 30px;
@@ -318,9 +324,11 @@
                   text-align: left;
                 "
               >
-                $${item.radiumCost * sliderMultipler} ${
-          item.radiumTotalCost ? ` - $${item.radiumTotalCost}` : ""
-        }
+                $${numberWithCommas(item.radiumCost * sliderMultipler)} ${
+              item.radiumTotalCost
+                ? ` - $${numberWithCommas(item.radiumTotalCost)}`
+                : ""
+            }
               </text>
               <text
                 x="${radiumTotalWidth + 76.5 + 25}"
@@ -328,7 +336,7 @@
                 fill="white"
                 style="
                   stylename: Body 4 / Regular/Desktop;
-                  font-family: PP Neue Montreal;
+                  font-family: Ppneuemontreal, sans-serif;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 20px;
@@ -338,7 +346,7 @@
               >
                 ${
                   item.radiumPrice
-                    ? `$${item.radiumPrice * sliderMultipler} / M Tokens`
+                    ? `$${item.radiumPrice} / M Tokens`
                     : `Est. ${item?.radiumTime} ${
                         item?.radiumTotalTime
                           ? ` - ${item?.radiumTotalTime}`
@@ -352,7 +360,7 @@
                 fill="white"
                 style="
                   stylename: Body 4 / Regular/Desktop;
-                  font-family: PP Neue Montreal;
+                  font-family: Ppneuemontreal, sans-serif;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 20px;
@@ -386,7 +394,7 @@
                 fill="white"
                 style="
                   stylename: Body 2 / Medium/Desktop;
-                  font-family: PP Neue Montreal;
+                  font-family: Ppneuemontreal, sans-serif;
                   font-size: 20px;
                   font-weight: 500;
                   line-height: 30px;
@@ -394,7 +402,7 @@
                   text-align: left;
                 "
               >
-                $${item.awsCost * sliderMultipler}
+                $${numberWithCommas(item.awsCost * sliderMultipler)}
               </text>
               <text
                 x="${awsWidth + 76.5 + 25}"
@@ -402,7 +410,7 @@
                 fill="white"
                 style="
                   stylename: Body 4 / Regular/Desktop;
-                  font-family: PP Neue Montreal;
+                  font-family: Ppneuemontreal, sans-serif;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 20px;
@@ -412,7 +420,7 @@
               >
                   ${
                     item.awsPrice
-                      ? `$${item.awsPrice * sliderMultipler} / M Tokens`
+                      ? `$${item.awsPrice} / M Tokens`
                       : `Est. ${item.awsTime} Node Hours`
                   }
 
@@ -423,7 +431,7 @@
                 fill="white"
                 style="
                   stylename: Body 4 / Regular/Desktop;
-                  font-family: PP Neue Montreal;
+                  font-family: Ppneuemontreal, sans-serif;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 20px;
@@ -464,6 +472,7 @@
                 </pattern>
               </defs>
               <text
+               style="font-size: 14px;"
                x="50"
                y="300"
                fill="white"
@@ -472,71 +481,71 @@
               </text>
             </svg>
            `;
-        // Select the graph div
+            // Select the graph div
 
-        var graphDiv = document.getElementById("graph");
+            var graphDiv = document.getElementById("graph");
 
-        // Insert SVG code into the graph div
-        graphDiv.innerHTML = svgCode;
-      };
-      const subTabClick = (e) => {
-        if (e.target.dataset.subtab) {
-          const subTabs = document.querySelectorAll(".sub-tab");
-          subTabs.forEach((subTab) => {
-            subTab.classList.remove("sub-tab-active");
-          });
-          e.target.classList.add("sub-tab-active");
-          updateContentent(e.target.dataset.subtab);
-        }
-      };
+            // Insert SVG code into the graph div
+            graphDiv.innerHTML = svgCode;
+          };
+          const subTabClick = (e) => {
+            if (e.target.dataset.subtab) {
+              const subTabs = document.querySelectorAll(".sub-tab");
+              subTabs.forEach((subTab) => {
+                subTab.classList.remove("sub-tab-active");
+              });
+              e.target.classList.add("sub-tab-active");
+              updateContentent(e.target.dataset.subtab);
+            }
+          };
 
-      const updateContentent = (title) => {
-        const dataFound = data.find((item) => item.title === title);
-        if (dataFound) {
-          showGraph(dataFound);
-          updateSubContent(dataFound);
-        }
-      };
+          const updateContentent = (title) => {
+            const dataFound = data.find((item) => item.title === title);
+            if (dataFound) {
+              showGraph(dataFound);
+              updateSubContent(dataFound);
+            }
+          };
 
-      const updateSubContent = (dataFound) => {
-        var contentDiv = document.getElementById("sub-content");
-        contentDiv.innerHTML = dataFound.content;
-      };
+          const updateSubContent = (dataFound) => {
+            var contentDiv = document.getElementById("sub-content");
+            contentDiv.innerHTML = dataFound.content;
+          };
 
-      const displaySubTabs = (title) => {
-        let subTabs = "";
-        data.map((item, index) => {
-          subTabs =
-            subTabs +
-            `<div class="sub-tab ${
-              item.title === title ? "sub-tab-active" : ""
-            }" data-subtab="${item.title}">${item.title}</div>`;
-        });
+          const displaySubTabs = (title) => {
+            let subTabs = "";
+            data.map((item, index) => {
+              subTabs =
+                subTabs +
+                `<div class="sub-tab ${
+                  item.title === title ? "sub-tab-active" : ""
+                }" data-subtab="${item.title}">${item.title}</div>`;
+            });
 
-        var subTabsDiv = document.getElementById("sub-tabs");
+            var subTabsDiv = document.getElementById("sub-tabs");
 
-        // Insert SVG code into the graph div
-        subTabsDiv.innerHTML = subTabs;
-        subTabsDiv.addEventListener("click", (e) => subTabClick(e));
-      };
+            // Insert SVG code into the graph div
+            subTabsDiv.innerHTML = subTabs;
+            subTabsDiv.addEventListener("click", (e) => subTabClick(e));
+          };
 
-      const setInit = () => {
-        showGraph(data[0]);
-        updateSubContent(data[0]);
-        displaySubTabs(data[0]?.title);
-      };
-      setInit();
+          const setInit = () => {
+            showGraph(data[0]);
+            updateSubContent(data[0]);
+            displaySubTabs(data[0]?.title);
+          };
+          setInit();
 
-      const showSlider = (show = true) => {
-        const sliderContentDiv = document.getElementById("slider-content");
-        const imageTableContent = document.getElementById("image-table");
+          const showSlider = (show = true) => {
+            const sliderContentDiv = document.getElementById("slider-content");
+            const imageTableContent = document.getElementById("image-table");
 
-        if (!show) {
-          sliderContentDiv.innerHTML = "";
-          imageTableContent.innerHTML = "";
-          return;
-        }
-        const svg = `<svg
+            if (!show) {
+              sliderContentDiv.innerHTML = "";
+              imageTableContent.innerHTML = "";
+              return;
+            }
+            const svg = `<svg
                 viewBox="0 0 525 45"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -560,6 +569,7 @@
                 <rect x="432" y="26" width="1" height="16" fill="white" />
                 <text x="434" y="40" fill="white">10 Trillion</text>
                 <circle
+                  style="cursor: pointer;"
                   cx="117"
                   cy="34"
                   r="10"
@@ -569,85 +579,85 @@
                 />
               </svg>
               `;
-        sliderContentDiv.innerHTML = svg;
-        imageTableContent.innerHTML = `<img style="width: 100%" src="./tableImage.png" alt="" />`;
+            sliderContentDiv.innerHTML = svg;
+            imageTableContent.innerHTML = `<img style="width: 100%" src="./tableImage.png" alt="" />`;
 
-        const slider = document.getElementById("slider");
-        const circle = document.getElementById("circle");
-        const circleRadius = parseInt(circle.getAttribute("r"));
-        const rects = slider.querySelectorAll("rect");
-        const circleTitle = document.getElementById("circle-tool-tip");
-        const minX = 107;
-        const maxX = 364;
-        const sliderValues = [
-          "10B Tokens",
-          "100B Tokens",
-          "1T Tokens",
-          "10T Tokens",
-        ];
+            const slider = document.getElementById("slider");
+            const circle = document.getElementById("circle");
+            const circleRadius = parseInt(circle.getAttribute("r"));
+            const rects = slider.querySelectorAll("rect");
+            const circleTitle = document.getElementById("circle-tool-tip");
+            const minX = 107;
+            const maxX = 364;
+            const sliderValues = [
+              "10B Tokens",
+              "100B Tokens",
+              "1T Tokens",
+              "10T Tokens",
+            ];
 
-        let isDragging = false;
+            let isDragging = false;
 
-        // Function to move the circle to the specified position
-        const moveCircle = (x) => {
-          // Ensure the circle stays within the slider boundaries
-          const newX = Math.min(
-            Math.max(x, minX + circleRadius),
-            maxX - circleRadius
-          );
-          const newIndex = ((newX - minX - 10) / 79).toFixed(0);
-          console.log("new Index ", newIndex);
-          circle.setAttribute("cx", newX);
-          circleTitle.setAttribute("x", newX - 35);
-          circleTitle.textContent = sliderValues[newIndex];
+            // Function to move the circle to the specified position
+            const moveCircle = (x) => {
+              // Ensure the circle stays within the slider boundaries
+              const newX = Math.min(
+                Math.max(x, minX + circleRadius),
+                maxX - circleRadius
+              );
+              const newIndex = ((newX - minX - 10) / 79).toFixed(0);
+              console.log("new Index ", newIndex);
+              circle.setAttribute("cx", newX);
+              circleTitle.setAttribute("x", newX - 35);
+              circleTitle.textContent = sliderValues[newIndex];
 
-          const prevValue = JSON.parse(JSON.stringify(sliderMultipler));
-          if (newIndex == 0) {
-            sliderMultipler = 1;
-          } else if (newIndex == 1) {
-            sliderMultipler = 10;
-          } else if (newIndex == 2) {
-            sliderMultipler = 100;
-          } else if (newIndex === 3) {
-            sliderMultipler = 1000;
-          }
+              const prevValue = JSON.parse(JSON.stringify(sliderMultipler));
+              if (newIndex == 0) {
+                sliderMultipler = 1;
+              } else if (newIndex == 1) {
+                sliderMultipler = 10;
+              } else if (newIndex == 2) {
+                sliderMultipler = 100;
+              } else if (newIndex === 3) {
+                sliderMultipler = 1000;
+              }
 
-          if (prevValue !== sliderMultipler) {
-            const elements = document.getElementsByClassName("sub-tab-active");
-            const element = elements[0];
-            showGraph(
-              data[0].title === element.textContent ? data[0] : data[1]
-            );
-          }
-        };
+              if (prevValue !== sliderMultipler) {
+                const elements =
+                  document.getElementsByClassName("sub-tab-active");
+                const element = elements[0];
+                showGraph(
+                  data[0].title === element.textContent ? data[0] : data[1]
+                );
+              }
+            };
 
-        // Event listener to start dragging the circle
-        circle.addEventListener("mousedown", (event) => {
-          isDragging = true;
-        });
+            // Event listener to start dragging the circle
+            circle.addEventListener("mousedown", (event) => {
+              isDragging = true;
+            });
 
-        // Event listener to stop dragging the circle
-        document.addEventListener("mouseup", () => {
-          isDragging = false;
-        });
+            // Event listener to stop dragging the circle
+            document.addEventListener("mouseup", () => {
+              isDragging = false;
+            });
 
-        // Event listener to move the circle with the cursor
-        slider.addEventListener("mousemove", (event) => {
-          if (isDragging) {
-            const mouseX = event.clientX;
-            const sliderX = slider.getBoundingClientRect().left;
-            const newPosition = mouseX - sliderX;
-            moveCircle(newPosition);
-          }
-        });
+            // Event listener to move the circle with the cursor
+            slider.addEventListener("mousemove", (event) => {
+              if (isDragging) {
+                const mouseX = event.clientX;
+                const sliderX = slider.getBoundingClientRect().left;
+                const newPosition = mouseX - sliderX;
+                moveCircle(newPosition);
+              }
+            });
 
-        // Prevent default behavior to avoid text selection while dragging
-        document.addEventListener("selectstart", (event) => {
-          if (isDragging) {
-            event.preventDefault();
-          }
-        });
-      };
-    </script>
-  </body>
-</html>
+            // Prevent default behavior to avoid text selection while dragging
+            document.addEventListener("selectstart", (event) => {
+              if (isDragging) {
+                event.preventDefault();
+              }
+            });
+          };
+        </script>
+      </div>
