@@ -195,7 +195,12 @@
                   id="sub-content"
                 ></div>
                 <div
-                  style="display: flex; width: 100%; margin-top: 16px"
+                  style="
+                    display: flex;
+                    width: 100%;
+                    margin-top: 16px;
+                    justify-content: center;
+                  "
                   id="slider-content"
                 ></div>
                 <div
@@ -204,6 +209,7 @@
                     display: flex;
                     padding-right: 2vw;
                     margin-top: 5vh;
+                    justify-content: center;
                   "
                   id="image-table"
                 ></div>
@@ -582,9 +588,16 @@
             const handleClick = (event) => {
               console.log("On click clicked =>", event);
             };
+
+            let sliderWidth = 525;
+
+            if (window.innerWidth <= 768) {
+              sliderWidth = 300;
+            }
+
             const svg = `<svg
-                style="width: 525px; height: 45px;" 
-                viewBox="0 0 525 45"
+                style="width: ${sliderWidth}px; height: 45px;" 
+                viewBox="0 0 ${sliderWidth} 45"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 id="slider"
@@ -619,7 +632,15 @@
               </svg>
               `;
             sliderContentDiv.innerHTML = svg;
-            imageTableContent.innerHTML = `<img style="width: 100%" src="./tableImage.png" alt="" />`;
+
+            let tableDimensions = "height: 176px; width: auto;";
+
+            if (window.innerWidth <= 768) {
+              tableDimensions =
+                "height: auto; width: 100%; margin-bottom: 16px;";
+            }
+
+            imageTableContent.innerHTML = `<img style="${tableDimensions}" src="https://raw.githubusercontent.com/AbirAbbas/radium-widget/main/Frame%201000002670.png" alt="" />`;
 
             const slider = document.getElementById("slider");
             const circle = document.getElementById("circle");
