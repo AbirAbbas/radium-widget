@@ -1,5 +1,22 @@
 <div class="pricing-calculator" style="flex: auto">
         <style>
+          .sub-tab,
+          .main-tab {
+            cursor: pointer;
+            font-family: Ppneuemontreal, sans-serif;
+          }
+
+          /* Mobile styles */
+          @media only screen and (max-width: 768px) {
+            .main-tab,
+            .sub-tab {
+              width: 100%;
+            }
+
+            .pricing-calculator {
+              padding: 10px;
+            }
+          }
           .sub-tab {
             width: fit-content;
             height: fit-content;
@@ -40,10 +57,8 @@
           .main-tab-active {
             background: #0038a6;
           }
-        </style>
-        <div
-          style="
-            width: auto;
+          .main-section {
+            width: 100%;
             height: auto;
             top: 2243px;
             gap: 0px;
@@ -55,12 +70,46 @@
             align-items: center;
             padding-top: 16px;
             padding-bottom: 64px;
-          "
-        >
+          }
+          .tow-section {
+            display: flex;
+            flex-direction: row;
+          }
+          .content-left-section,
+          .content-right-section {
+            width: 50%;
+            color: #ffffff;
+          }
+          .content-left-section {
+            display: flex;
+            flex-direction: column;
+          }
+          .main-section-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 75%;
+          }
+
+          /* Tablet/Desktop styles */
+          @media only screen and (width< 1250px) {
+            .tow-section {
+              display: flex;
+              flex-direction: column;
+            }
+            .content-left-section,
+            .content-right-section {
+              width: 100%;
+            }
+            .main-section-content {
+              max-width: 95%;
+            }
+          }
+        </style>
+        <div class="main-section">
           <div
             style="
               width: 100%;
-              height: 70px;
               top: 30px;
               left: 713px;
               gap: 0px;
@@ -100,14 +149,7 @@
             </div>
             <div class="main-tab" id="radium-deploy">RadiumDeploy™</div>
           </div>
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              width: 100%;
-              max-width: 75%;
-            "
-          >
+          <div class="main-section-content">
             <div
               style="
                 stylename: Body 3 / Regular/Desktop;
@@ -122,15 +164,8 @@
             >
               Explore how Radium affects the usage of common models:
             </div>
-            <div style="display: flex; flex-direction: row">
-              <div
-                style="
-                  width: 50%;
-                  color: #ffffff;
-                  display: flex;
-                  flex-direction: column;
-                "
-              >
+            <div class="tow-section">
+              <div class="content-left-section">
                 <div
                   style="
                     width: 100%;
@@ -173,7 +208,7 @@
                   id="image-table"
                 ></div>
               </div>
-              <div style="width: 50%; color: #ffffff" id="graph"></div>
+              <div class="content-right-section" id="graph"></div>
             </div>
           </div>
         </div>
@@ -445,13 +480,12 @@
                     : `${(item.awsCost / item.awsTime).toFixed(1)} per GPU Hour`
                 }
               </text>
-              <rect
-                x="30"
-                y="65"
-                width="34"
-                height="21"
-                fill="url(#pattern0_1169_14115)"
-              />
+            <image
+              href="https://raw.githubusercontent.com/AbirAbbas/radium-widget/main/aws_icon.png"
+              x="30" y="65"
+              width="34" height="21"
+            />
+
               <path
                 d="M87.344 48H86.144L90.416 36.56H91.728L96.032 48H94.784L93.632 44.832H88.496L87.344 48ZM91.056 37.664L88.88 43.792H93.264L91.088 37.664H91.056ZM99.8033 48H98.5233L95.6433 36.56H96.8753L99.2113 46.336H99.2433L101.931 36.56H103.227L105.915 46.336H105.963L108.299 36.56H109.515L106.651 48H105.355L102.603 37.936H102.555L99.8033 48ZM114.711 48.208C111.959 48.208 109.975 46.784 109.815 44.208H111.031C111.191 45.984 112.279 47.184 114.663 47.184C116.775 47.184 117.495 46.176 117.495 44.912C117.511 43.216 116.327 42.928 113.975 42.4C112.103 41.968 110.295 41.392 110.295 39.296C110.295 37.472 111.751 36.352 114.103 36.352C116.583 36.352 118.151 37.616 118.327 39.856H117.111C116.919 38.272 116.039 37.376 114.103 37.376C112.423 37.376 111.511 38.064 111.511 39.248C111.511 40.784 112.871 41.104 114.551 41.472C116.903 41.984 118.711 42.56 118.711 44.88C118.711 46.736 117.431 48.208 114.711 48.208Z"
                 fill="white"
@@ -545,6 +579,9 @@
               imageTableContent.innerHTML = "";
               return;
             }
+            const handleClick = (event) => {
+              console.log("On click clicked =>", event);
+            };
             const svg = `<svg
                 style="width: 525px; height: 45px;" 
                 viewBox="0 0 525 45"
@@ -561,12 +598,13 @@
                   height="4"
                   transform="translate(38 32)"
                   fill="white"
+                  style="cursor:pointer"
                 />
                 <rect x="38" y="26" width="1" height="16" fill="white" />
-                <rect x="117" y="26" width="1" height="16" fill="white" />
-                <rect x="196" y="26" width="1" height="16" fill="white" />
-                <rect x="275" y="26" width="1" height="16" fill="white" />
-                <rect x="354" y="26" width="1" height="16" fill="white" />
+                <rect x="117" y="26" width="1" height="16" fill="white" style="cursor:pointer"  />
+                <rect x="196" y="26" width="1" height="16" fill="white"  style="cursor:pointer" />
+                <rect x="275" y="26" width="1" height="16" fill="white" style="cursor:pointer" />
+                <rect x="354" y="26" width="1" height="16" fill="white" style="cursor:pointer"  />
                 <rect x="432" y="26" width="1" height="16" fill="white" />
                 <text x="434" y="40" fill="white">10 Trillion</text>
                 <circle
@@ -590,6 +628,7 @@
             const circleTitle = document.getElementById("circle-tool-tip");
             const minX = 107;
             const maxX = 364;
+
             const sliderValues = [
               "10B Tokens",
               "100B Tokens",
@@ -598,6 +637,13 @@
             ];
 
             let isDragging = false;
+
+            slider.addEventListener("click", (event) => {
+              const sliderRect = slider.getBoundingClientRect();
+              const clickX = event.clientX - sliderRect.left;
+              console.log("Clicked X Coordinate:", clickX);
+              moveCircle(clickX);
+            });
 
             // Function to move the circle to the specified position
             const moveCircle = (x) => {
