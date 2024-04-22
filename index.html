@@ -585,18 +585,20 @@
               imageTableContent.innerHTML = "";
               return;
             }
-            const handleClick = (event) => {
-              console.log("On click clicked =>", event);
-            };
 
-            let sliderWidth = 525;
+            let sliderWidth = "525px";
+            let shrinkSlider = false;
+            const shrinkMultiplier = 0.7;
 
             if (window.innerWidth <= 768) {
-              sliderWidth = 300;
+              sliderWidth = "100%";
+              shrinkSlider = true;
             }
 
             const svg = `<svg
-                style="width: ${sliderWidth}px; height: 45px;" 
+                style="width: ${sliderWidth}; height: 45px; ${
+              shrinkSlider ? `zoom: ${shrinkMultiplier};` : ""
+            }"
                 viewBox="0 0 ${sliderWidth} 45"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -631,6 +633,7 @@
                 />
               </svg>
               `;
+
             sliderContentDiv.innerHTML = svg;
 
             let tableDimensions = "height: 176px; width: auto;";
@@ -647,8 +650,8 @@
             const circleRadius = parseInt(circle.getAttribute("r"));
             const rects = slider.querySelectorAll("rect");
             const circleTitle = document.getElementById("circle-tool-tip");
-            const minX = 107;
-            const maxX = 364;
+            const minX = shrinkSlider ? 107 * shrinkMultiplier : 107;
+            const maxX = shrinkSlider ? 364 * shrinkMultiplier : 364;
 
             const sliderValues = [
               "10B Tokens",
@@ -662,19 +665,22 @@
             slider.addEventListener("click", (event) => {
               const sliderRect = slider.getBoundingClientRect();
               const clickX = event.clientX - sliderRect.left;
-              console.log("Clicked X Coordinate:", clickX);
               moveCircle(clickX);
             });
 
             // Function to move the circle to the specified position
             const moveCircle = (x) => {
               // Ensure the circle stays within the slider boundaries
-              const newX = Math.min(
+              let newX = Math.min(
                 Math.max(x, minX + circleRadius),
                 maxX - circleRadius
               );
+
+              if (shrinkSlider) newX = newX / shrinkMultiplier;
+
+              // 79 is the distance between each value
               const newIndex = ((newX - minX - 10) / 79).toFixed(0);
-              console.log("new Index ", newIndex);
+
               circle.setAttribute("cx", newX);
               circleTitle.setAttribute("x", newX - 35);
               circleTitle.textContent = sliderValues[newIndex];
