@@ -1,737 +1,746 @@
 <div class="pricing-calculator" style="flex: auto">
-        <style>
-          .sub-tab,
-          .main-tab {
-            cursor: pointer;
-            font-family: Ppneuemontreal, sans-serif;
-          }
+  <style>
+    .sub-tab,
+    .main-tab {
+      cursor: pointer;
+      font-family: Ppneuemontreal, sans-serif;
+    }
 
-          /* Mobile styles */
-          @media only screen and (max-width: 768px) {
-            .main-tab,
-            .sub-tab {
+    /* Mobile styles */
+    @media only screen and (max-width: 768px) {
+      .main-tab,
+      .sub-tab {
+        width: 100%;
+      }
+
+      .pricing-calculator {
+        padding: 10px;
+      }
+    }
+    .sub-tab {
+      width: fit-content;
+      height: fit-content;
+      padding: 4px 0px 4px 0px;
+      gap: 10px;
+      stylename: Body 2 / Regular/Desktop;
+      font-family: Ppneuemontreal, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: -0.01em;
+      text-align: left;
+      cursor: pointer;
+    }
+    .sub-tab-active {
+      border-bottom: 2px solid #ffffff;
+      border: 0px 0px 2px 0px;
+      stylename: Body 2 / Medium/Desktop !important;
+      font-weight: 500 !important;
+    }
+    .main-tab {
+      width: 50%;
+      height: Hug (44px) px;
+      padding: 10px 30px 10px 30px;
+      gap: 10px;
+      opacity: 0px;
+      stylename: Body 3 / Regular/Desktop;
+      font-family: Ppneuemontreal, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      text-align: left;
+      color: #ffffff;
+      text-align: center;
+      cursor: pointer;
+    }
+    .main-tab-active {
+      background: #0038a6;
+    }
+    .main-section {
+      width: 100%;
+      height: auto;
+      top: 2243px;
+      gap: 0px;
+      opacity: 0px;
+      background: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      padding-top: 16px;
+      padding-bottom: 64px;
+    }
+    .tow-section {
+      display: flex;
+      flex-direction: row;
+    }
+    .content-left-section,
+    .content-right-section {
+      width: 50%;
+      color: #ffffff;
+    }
+    .content-left-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-section-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 75%;
+    }
+
+    /* Tablet/Desktop styles */
+    @media only screen and (width< 1250px) {
+      .tow-section {
+        display: flex;
+        flex-direction: column;
+      }
+      .content-left-section,
+      .content-right-section {
+        width: 100%;
+      }
+      .main-section-content {
+        max-width: 95%;
+      }
+    }
+  </style>
+  <div class="main-section">
+    <div
+      style="
+        width: 100%;
+        top: 30px;
+        left: 713px;
+        gap: 0px;
+        opacity: 0px;
+        stylename: H2/Desktop;
+        font-family: Ppneuemontreal, sans-serif;
+        font-size: 54px;
+        font-weight: 500;
+        line-height: 70px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #ffffff;
+        justify-items: center;
+        margin-bottom: 32px;
+      "
+    >
+      Efficiency equates to cost savings
+    </div>
+    <div
+      style="
+        top: 130px;
+        left: 824px;
+        padding: 10px;
+        gap: 10px;
+        border: 1px;
+        opacity: 0px;
+        border: 1px solid #ffffff;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        min-width: 30vw;
+        margin-bottom: 32px;
+      "
+    >
+      <div class="main-tab main-tab-active" id="radium-build">
+        RadiumBuild™
+      </div>
+      <div class="main-tab" id="radium-deploy">RadiumDeploy™</div>
+    </div>
+    <div class="main-section-content">
+      <div
+        style="
+          stylename: Body 3 / Regular/Desktop;
+          font-family: Ppneuemontreal, sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -0.01em;
+          text-align: left;
+          color: #ffffff;
+        "
+      >
+        Explore how Radium affects the usage of common models:
+      </div>
+      <div class="tow-section">
+        <div class="content-left-section">
+          <div
+            style="
               width: 100%;
-            }
+              gap: 20px;
+              top: 20px;
+              display: flex;
+              height: fit-content;
+            "
+            id="sub-tabs"
+          ></div>
+          <div
+            style="
+              display: flex;
+              gap: 20px;
+              top: 20px;
+              stylename: Body 4 / Regular/Mobile;
+              font-family: Ppneuemontreal, sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 18px;
+              letter-spacing: -0.01em;
+              text-align: left;
+              height: fit-content;
+              margin-top: 32px;
+              padding-right: 2vw;
+            "
+            id="sub-content"
+          ></div>
+          <div
+            style="
+              display: flex;
+              width: 100%;
+              margin-top: 16px;
+              justify-content: center;
+            "
+            id="slider-content"
+          ></div>
+          <div
+            style="
+              display: flex;
+              display: flex;
+              padding-right: 2vw;
+              margin-top: 5vh;
+              justify-content: center;
+            "
+            id="image-table"
+          ></div>
+        </div>
+        <div class="content-right-section" id="graph"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const rediumBuild = [
+      {
+        title: "Llama2 Training",
+        name: "Training Llama-2 7B",
+        content:
+          "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+        key: "rb1",
+        awsTime: 32857,
+        awsCost: 1325829,
+        radiumTime: 17414,
+        radiumCost: 522429,
+        radiumTotalTime: 24643,
+        radiumTotalCost: 739286,
+      },
+      {
+        title: "Llama2 Fine Tuning",
+        name: "Fine Tuning Llama-2 7B",
+        content:
+          "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+        key: "rb2",
+        awsTime: 39,
+        awsCost: 1580,
+        radiumTime: 18,
+        radiumCost: 544,
+        radiumTotalTime: 29,
+        radiumTotalCost: 868,
+      },
+      {
+        title: "BERT",
+        name: "BERT (Language Model)",
+        content:
+          "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+        key: "rb2",
+        awsTime: 114,
+        awsCost: 4681,
+        radiumTime: 54,
+        radiumCost: 1611,
+        radiumTotalTime: 86,
+        radiumTotalCost: 2571,
+      },
+      {
+        title: "I3D",
+        name: "3D video Model",
+        content:
+          "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+        key: "rb2",
+        awsTime: 460,
+        awsCost: 18842,
+        radiumTime: 216,
+        radiumCost: 6486,
+        radiumTotalTime: 345,
+        radiumTotalCost: 10350,
+      },
+    ];
 
-            .pricing-calculator {
-              padding: 10px;
-            }
-          }
-          .sub-tab {
-            width: fit-content;
-            height: fit-content;
-            padding: 4px 0px 4px 0px;
-            gap: 10px;
-            stylename: Body 2 / Regular/Desktop;
+    const rediumDeploy = [
+      {
+        title: "Llama2-13B",
+        name: "Llama2-13B",
+        content:
+          "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
+        awsCost: 7500,
+        awsPrice: 0.75,
+        radiumCost: 2000,
+        radiumPrice: 0.2,
+      },
+      {
+        title: "Llama2–70B",
+        name: "Llama2–70B",
+        content:
+          "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
+        awsCost: 19500,
+        awsPrice: 1.95,
+        radiumCost: 8000,
+        radiumPrice: 0.8,
+      },
+    ];
+
+    let data = rediumBuild;
+    const rediumBuildDiv = document.getElementById("radium-build");
+    const rediumDeployDiv = document.getElementById("radium-deploy");
+    var sliderMultipler = 1;
+    rediumBuildDiv.addEventListener("click", () => {
+      data = rediumBuild;
+      rediumDeployDiv.classList.remove("main-tab-active");
+      rediumBuildDiv.classList.add("main-tab-active");
+      setInit();
+      showSlider(false);
+    });
+
+    rediumDeployDiv.addEventListener("click", () => {
+      data = rediumDeploy;
+      rediumBuildDiv.classList.remove("main-tab-active");
+      rediumDeployDiv.classList.add("main-tab-active");
+      setInit();
+      showSlider(true);
+    });
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    const showGraph = (item) => {
+      const awsWidth =
+        (item.awsCost * 600) / (item.awsCost + item.radiumCost);
+      const radiumWidth =
+        (item.radiumCost * 600) / (item.awsCost + item.radiumCost);
+      const radiumTotalWidth = item.radiumTotalCost
+        ? (item.radiumTotalCost * 600) /
+          (item.awsCost + item.radiumTotalCost)
+        : radiumWidth;
+
+      var svgCode = `
+             <svg
+        viewBox="0 0 721 343"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <rect width="721" height="343" fill="#1C1E2A" />
+        <rect x="76.5" y="157.5" width="${radiumWidth}" height="29" fill="white" />
+        <rect x="76.5" y="157.5" width="${radiumWidth}" height="29" stroke="white" />
+        <rect
+          x="${76 + radiumWidth}"
+      y="157.5"
+      width="${radiumTotalWidth - radiumWidth}"
+      height="30"
+      stroke="white"
+      stroke-width="2"
+      stroke-linejoin="round"
+      stroke-dasharray="4 4"
+    />
+        <text
+          x="${radiumTotalWidth + 76.5 + 25}"
+          y="157.5"
+          fill="white"
+          style="
+            stylename: Body 2 / Medium/Desktop;
             font-family: Ppneuemontreal, sans-serif;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 30px;
             letter-spacing: -0.01em;
             text-align: left;
-            cursor: pointer;
-          }
-          .sub-tab-active {
-            border-bottom: 2px solid #ffffff;
-            border: 0px 0px 2px 0px;
-            stylename: Body 2 / Medium/Desktop !important;
-            font-weight: 500 !important;
-          }
-          .main-tab {
-            width: 50%;
-            height: Hug (44px) px;
-            padding: 10px 30px 10px 30px;
-            gap: 10px;
-            opacity: 0px;
-            stylename: Body 3 / Regular/Desktop;
+          "
+        >
+          $${numberWithCommas(item.radiumCost * sliderMultipler)} ${
+        item.radiumTotalCost
+          ? ` - $${numberWithCommas(item.radiumTotalCost)}`
+          : ""
+      }
+        </text>
+        <text
+          x="${radiumTotalWidth + 76.5 + 25}"
+          y="181.5"
+          fill="white"
+          style="
+            stylename: Body 4 / Regular/Desktop;
             font-family: Ppneuemontreal, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 20px;
             letter-spacing: -0.01em;
             text-align: left;
-            color: #ffffff;
-            text-align: center;
-            cursor: pointer;
+          "
+        >
+          ${
+            item.radiumPrice
+              ? `$${item.radiumPrice} / M Tokens`
+              : `Est. ${item?.radiumTime} ${
+                  item?.radiumTotalTime
+                    ? ` - ${item?.radiumTotalTime}`
+                    : ""
+                } Node Hours`
           }
-          .main-tab-active {
-            background: #0038a6;
+        </text>
+        <text
+          x="${radiumTotalWidth + 76.5 + 25}"
+          y="205.5"
+          fill="white"
+          style="
+            stylename: Body 4 / Regular/Desktop;
+            font-family: Ppneuemontreal, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            text-align: left;
+          "
+        >
+          ${
+            item.radiumPrice
+              ? ""
+              : `$${(item.radiumCost / item.radiumTime).toFixed(
+                  1
+                )} per GPU Hour`
           }
-          .main-section {
-            width: 100%;
-            height: auto;
-            top: 2243px;
-            gap: 0px;
-            opacity: 0px;
-            background: #000000;
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            align-items: center;
-            padding-top: 16px;
-            padding-bottom: 64px;
-          }
-          .tow-section {
-            display: flex;
-            flex-direction: row;
-          }
-          .content-left-section,
-          .content-right-section {
-            width: 50%;
-            color: #ffffff;
-          }
-          .content-left-section {
-            display: flex;
-            flex-direction: column;
-          }
-          .main-section-content {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 75%;
-          }
+        </text>
+        <path
+          d="M88.384 145H87.216V133.56H91.696C94.128 133.56 95.456 134.696 95.456 136.792C95.456 138.312 94.576 139.352 93.328 139.672V139.704C95.952 140.232 95.04 144.712 95.664 144.904V145H94.416C93.888 144.52 94.928 140.248 91.872 140.248H88.384V145ZM88.384 139.224H91.408C93.232 139.224 94.288 138.408 94.288 136.808C94.288 135.352 93.456 134.584 91.488 134.584H88.384V139.224ZM99.2744 145.208C97.6424 145.208 96.6024 144.296 96.6024 142.936C96.6024 141.176 97.8504 140.616 99.9624 140.248C101.306 140.008 102.17 139.912 102.17 138.936C102.17 138.104 101.626 137.544 100.314 137.544C98.7304 137.544 98.1704 138.104 98.0904 139.304H96.9864C97.0664 137.864 97.9784 136.632 100.346 136.632C101.85 136.632 103.178 137.272 103.178 139.224V143.304C103.178 143.96 103.274 144.264 103.642 144.264C103.706 144.264 103.77 144.264 103.866 144.248V145C103.69 145.032 103.514 145.064 103.322 145.064C102.634 145.064 102.234 144.792 102.17 143.768H102.138C101.578 144.696 100.602 145.208 99.2744 145.208ZM99.4024 144.296C101.066 144.296 102.17 143.416 102.17 141.944V140.424C101.93 140.76 101.066 140.952 100.09 141.112C98.5064 141.4 97.6904 141.8 97.6904 142.84C97.6904 143.784 98.2184 144.296 99.4024 144.296ZM110.951 138.216V133.56H111.991V145H110.951V143.672H110.919C110.455 144.472 109.591 145.208 108.167 145.208C106.183 145.208 104.583 143.608 104.583 140.92C104.583 138.248 106.183 136.648 108.167 136.648C109.591 136.648 110.439 137.352 110.919 138.216H110.951ZM108.295 144.296C109.863 144.296 110.951 142.984 110.951 140.92C110.951 138.872 109.863 137.56 108.295 137.56C106.599 137.56 105.671 139.096 105.671 140.92C105.671 142.76 106.599 144.296 108.295 144.296ZM114.945 135.208H113.601V133.864H114.945V135.208ZM114.801 145H113.761V136.84H114.801V145ZM121.994 141.992V136.84H123.034V145H121.994V143.848H121.962C121.498 144.52 120.618 145.192 119.162 145.192C117.706 145.192 116.49 144.376 116.49 142.568V136.84H117.53V142.344C117.53 143.384 118.01 144.28 119.418 144.28C120.97 144.28 121.994 143.192 121.994 141.992ZM133.281 136.648C134.833 136.648 135.681 137.576 135.681 139.272V145H134.641V139.496C134.641 138.472 134.401 137.56 133.057 137.56C131.617 137.56 130.769 138.664 130.769 139.848V145H129.729V139.496C129.729 138.472 129.489 137.56 128.129 137.56C126.705 137.56 125.841 138.664 125.841 139.848V145H124.801V136.84H125.841V137.992H125.873C126.305 137.336 127.073 136.648 128.353 136.648C129.505 136.648 130.241 137.176 130.545 138.152H130.577C131.105 137.336 131.985 136.648 133.281 136.648Z"
+          fill="white"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M30 172.5V188H47.1429H64.2857V172.5V157H47.1429H30V172.5ZM63.6807 172.6V187.6H47.1429H30.605V172.6V157.6H47.1429H63.6807V172.6ZM33.6303 176.584V185.2H35.1429H36.6555V181.7V178.2H38.8564H41.0571L41.5738 179.55C41.858 180.293 42.4465 181.845 42.8817 183L43.6729 185.1L45.307 185.158C46.2058 185.19 46.9404 185.19 46.9394 185.158C46.9386 185.126 46.2744 183.436 45.4639 181.402L43.99 177.704L44.81 177.182C46.3999 176.171 46.9412 175.12 46.9412 173.046C46.9412 170.786 45.8654 169.18 43.8484 168.429C43.2006 168.188 41.9357 168.099 38.3193 168.042L33.6303 167.968V176.584ZM42.7194 171.053C43.6869 171.7 44.0444 172.723 43.6867 173.82C43.2097 175.284 42.7127 175.49 39.4651 175.565L36.6555 175.63V173.115V170.6H39.3483C41.8126 170.6 42.0988 170.638 42.7194 171.053ZM52.7074 172.504C51.2087 173.068 50.3336 173.93 49.9654 175.204C49.8089 175.745 49.8222 175.754 51.0129 175.944C52.1421 176.124 52.2294 176.11 52.3823 175.718C52.7455 174.787 53.539 174.323 54.916 174.236C55.7119 174.185 56.468 174.254 56.8504 174.411C57.5117 174.683 58.0336 175.594 58.0336 176.478C58.0336 176.939 57.9515 176.975 56.6723 177.083C51.7468 177.497 49.8339 178.51 49.4519 180.908C49.058 183.382 50.9336 185.385 53.6535 185.396C55.4819 185.402 56.8499 184.674 57.5871 183.3L57.9092 182.7L58.1226 183.9L58.3361 185.1L59.669 185.158L61.0017 185.217L60.9314 182.858C60.8928 181.561 60.8283 179.182 60.7884 177.572C60.7045 174.195 60.4965 173.639 59.0015 172.795C58.2401 172.366 57.8517 172.3 55.8151 172.257C54.1505 172.221 53.2733 172.291 52.7074 172.504ZM57.8922 179.865C57.8202 181.938 56.8136 183.017 54.8176 183.16C53.6906 183.241 53.5734 183.208 52.9997 182.639C51.1503 180.805 53.5571 178.548 57.2269 178.675L57.9328 178.7L57.8922 179.865ZM44.1176 192.34C44.1176 193.071 44.0638 193.227 43.8756 193.04C43.7425 192.908 43.2954 192.8 42.8819 192.8C41.8231 192.8 41.2941 193.5 41.2941 194.9C41.2941 196.3 41.8231 197 42.8819 197C43.2954 197 43.7425 196.892 43.8756 196.76C44.0638 196.573 44.1176 196.573 44.1176 196.76C44.1176 196.892 44.2538 197 44.4202 197C44.6747 197 44.7227 196.556 44.7227 194.2C44.7227 191.844 44.6747 191.4 44.4202 191.4C44.1941 191.4 44.1176 191.638 44.1176 192.34ZM47.7479 191.7C47.7479 191.867 47.9272 192 48.1513 192C48.3753 192 48.5546 191.867 48.5546 191.7C48.5546 191.533 48.3753 191.4 48.1513 191.4C47.9272 191.4 47.7479 191.533 47.7479 191.7ZM30.605 194.9C30.605 196.867 30.6307 197 31.0084 197C31.3751 197 31.4118 196.867 31.4118 195.531C31.4118 194.013 31.5886 193.647 32.4706 193.337C32.9859 193.155 32.902 192.8 32.3439 192.8C32.0749 192.8 31.7254 192.997 31.5477 193.25L31.2313 193.7L31.2206 193.25C31.2145 192.988 31.0836 192.8 30.9076 192.8C30.6579 192.8 30.605 193.167 30.605 194.9ZM35.4288 193.177C35.0598 193.475 34.9976 193.629 35.1731 193.806C35.3498 193.984 35.5059 193.94 35.8286 193.62C36.3299 193.123 37.1058 193.075 37.5487 193.514C38.0824 194.044 37.9379 194.4 37.1897 194.4C35.4649 194.4 34.4307 195.45 35.1235 196.499C35.3889 196.9 35.6208 197 36.2912 197C36.7868 197 37.2783 196.865 37.4967 196.669C37.8399 196.361 37.8655 196.361 37.8655 196.669C37.8655 196.851 38.0017 197 38.1681 197C38.4113 197 38.47 196.696 38.4676 195.45C38.4635 193.312 38.231 192.916 36.9366 192.841C36.1579 192.795 35.8011 192.875 35.4288 193.177ZM47.9496 194.9C47.9496 196.633 48.0024 197 48.2521 197C48.5018 197 48.5546 196.633 48.5546 194.9C48.5546 193.167 48.5018 192.8 48.2521 192.8C48.0024 192.8 47.9496 193.167 47.9496 194.9ZM51.5829 194.35C51.5867 196.345 51.8477 196.88 52.8591 196.963C53.286 196.998 53.7669 196.91 53.9459 196.763C54.1995 196.556 54.2852 196.553 54.3521 196.75C54.3987 196.888 54.5201 197 54.6218 197C54.7236 197 54.8067 196.055 54.8067 194.9C54.8067 193.167 54.7539 192.8 54.5042 192.8C54.2622 192.8 54.2017 193.1 54.2017 194.3C54.2017 195.533 54.1299 195.871 53.7983 196.2C52.845 197.145 52.1849 196.35 52.1849 194.255C52.1849 193.095 52.1236 192.8 51.8824 192.8C51.6391 192.8 51.5804 193.104 51.5829 194.35ZM58.0336 194.9C58.0336 196.633 58.0865 197 58.3361 197C58.5796 197 58.6387 196.69 58.6387 195.411C58.6387 193.996 58.6877 193.789 59.087 193.511C59.6452 193.124 59.7431 193.124 60.1369 193.514C60.3717 193.747 60.4538 194.239 60.4538 195.414C60.4538 196.69 60.5129 197 60.7563 197C60.9977 197 61.0588 196.704 61.0588 195.538C61.0588 194.079 61.2563 193.543 61.8655 193.35C62.0319 193.297 62.3268 193.335 62.521 193.434C62.8151 193.584 62.8739 193.897 62.8739 195.307C62.8739 196.679 62.9314 197 63.1765 197C63.6268 197 63.6141 193.563 63.1622 193.114C62.7217 192.678 61.798 192.722 61.3613 193.2L60.9961 193.6L60.7135 193.2C60.3775 192.724 59.4079 192.666 58.9753 193.095C58.7131 193.355 58.6643 193.355 58.5638 193.095C58.5009 192.933 58.3561 192.8 58.2415 192.8C58.1119 192.8 58.0336 193.591 58.0336 194.9ZM43.6693 193.511C44.284 193.938 44.3119 195.607 43.7143 196.2C43.2369 196.673 42.9223 196.701 42.3915 196.316C41.8268 195.907 41.8268 193.893 42.3915 193.484C42.8906 193.122 43.1157 193.127 43.6693 193.511ZM37.8655 195.273C37.8655 195.716 37.0606 196.6 36.6573 196.6C35.7181 196.6 35.2871 195.837 35.8891 195.24C36.2352 194.897 37.8655 194.924 37.8655 195.273Z"
+          fill="white"
+        />
+        <rect x="76.5" y="60.5" width="${awsWidth}" height="29" fill="black" />
+        <rect x="76.5" y="60.5" width="${awsWidth}" height="29" stroke="white" />
+        <text
+          x="${awsWidth + 76.5 + 25}"
+          y="60.5"
+          fill="white"
+          style="
+            stylename: Body 2 / Medium/Desktop;
+            font-family: Ppneuemontreal, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: -0.01em;
+            text-align: left;
+          "
+        >
+          $${numberWithCommas(item.awsCost * sliderMultipler)}
+        </text>
+        <text
+          x="${awsWidth + 76.5 + 25}"
+          y="84.5"
+          fill="white"
+          style="
+            stylename: Body 4 / Regular/Desktop;
+            font-family: Ppneuemontreal, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            text-align: left;
+          "
+        >
+            ${
+              item.awsPrice
+                ? `$${item.awsPrice} / M Tokens`
+                : `Est. ${item.awsTime} Node Hours`
+            }
 
-          /* Tablet/Desktop styles */
-          @media only screen and (width< 1250px) {
-            .tow-section {
-              display: flex;
-              flex-direction: column;
-            }
-            .content-left-section,
-            .content-right-section {
-              width: 100%;
-            }
-            .main-section-content {
-              max-width: 95%;
-            }
+        </text>
+        <text
+          x="${awsWidth + 76.5 + 25}"
+          y="104.5"
+          fill="white"
+          style="
+            stylename: Body 4 / Regular/Desktop;
+            font-family: Ppneuemontreal, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            text-align: left;
+          "
+        >
+          ${
+            item.awsPrice
+              ? ""
+              : `${(item.awsCost / item.awsTime).toFixed(1)} per GPU Hour`
           }
-        </style>
-        <div class="main-section">
-          <div
-            style="
-              width: 100%;
-              top: 30px;
-              left: 713px;
-              gap: 0px;
-              opacity: 0px;
-              stylename: H2/Desktop;
-              font-family: Ppneuemontreal, sans-serif;
-              font-size: 54px;
-              font-weight: 500;
-              line-height: 70px;
-              letter-spacing: -0.01em;
-              text-align: center;
-              color: #ffffff;
-              justify-items: center;
-              margin-bottom: 32px;
-            "
+        </text>
+      <image
+        href="https://raw.githubusercontent.com/AbirAbbas/radium-widget/main/aws_icon.png"
+        x="30" y="65"
+        width="34" height="21"
+      />
+
+        <path
+          d="M87.344 48H86.144L90.416 36.56H91.728L96.032 48H94.784L93.632 44.832H88.496L87.344 48ZM91.056 37.664L88.88 43.792H93.264L91.088 37.664H91.056ZM99.8033 48H98.5233L95.6433 36.56H96.8753L99.2113 46.336H99.2433L101.931 36.56H103.227L105.915 46.336H105.963L108.299 36.56H109.515L106.651 48H105.355L102.603 37.936H102.555L99.8033 48ZM114.711 48.208C111.959 48.208 109.975 46.784 109.815 44.208H111.031C111.191 45.984 112.279 47.184 114.663 47.184C116.775 47.184 117.495 46.176 117.495 44.912C117.511 43.216 116.327 42.928 113.975 42.4C112.103 41.968 110.295 41.392 110.295 39.296C110.295 37.472 111.751 36.352 114.103 36.352C116.583 36.352 118.151 37.616 118.327 39.856H117.111C116.919 38.272 116.039 37.376 114.103 37.376C112.423 37.376 111.511 38.064 111.511 39.248C111.511 40.784 112.871 41.104 114.551 41.472C116.903 41.984 118.711 42.56 118.711 44.88C118.711 46.736 117.431 48.208 114.711 48.208Z"
+          fill="white"
+        />
+
+        <path d="M76 31L76 216" stroke="white" stroke-width="2" />
+        <defs>
+          <pattern
+            id="pattern0_1169_14115"
+            patternContentUnits="objectBoundingBox"
+            width="1"
+            height="1"
           >
-            Efficiency equates to cost savings
-          </div>
-          <div
-            style="
-              top: 130px;
-              left: 824px;
-              padding: 10px;
-              gap: 10px;
-              border: 1px;
-              opacity: 0px;
-              border: 1px solid #ffffff;
-              display: flex;
-              justify-content: center;
-              justify-items: center;
-              min-width: 30vw;
-              margin-bottom: 32px;
-            "
-          >
-            <div class="main-tab main-tab-active" id="radium-build">
-              RadiumBuild™
-            </div>
-            <div class="main-tab" id="radium-deploy">RadiumDeploy™</div>
-          </div>
-          <div class="main-section-content">
-            <div
-              style="
-                stylename: Body 3 / Regular/Desktop;
-                font-family: Ppneuemontreal, sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: -0.01em;
-                text-align: left;
-                color: #ffffff;
-              "
-            >
-              Explore how Radium affects the usage of common models:
-            </div>
-            <div class="tow-section">
-              <div class="content-left-section">
-                <div
-                  style="
-                    width: 100%;
-                    gap: 20px;
-                    top: 20px;
-                    display: flex;
-                    height: fit-content;
-                  "
-                  id="sub-tabs"
-                ></div>
-                <div
-                  style="
-                    display: flex;
-                    gap: 20px;
-                    top: 20px;
-                    stylename: Body 4 / Regular/Mobile;
-                    font-family: Ppneuemontreal, sans-serif;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 18px;
-                    letter-spacing: -0.01em;
-                    text-align: left;
-                    height: fit-content;
-                    margin-top: 32px;
-                    padding-right: 2vw;
-                  "
-                  id="sub-content"
-                ></div>
-                <div
-                  style="
-                    display: flex;
-                    width: 100%;
-                    margin-top: 16px;
-                    justify-content: center;
-                  "
-                  id="slider-content"
-                ></div>
-                <div
-                  style="
-                    display: flex;
-                    display: flex;
-                    padding-right: 2vw;
-                    margin-top: 5vh;
-                    justify-content: center;
-                  "
-                  id="image-table"
-                ></div>
-              </div>
-              <div class="content-right-section" id="graph"></div>
-            </div>
-          </div>
-        </div>
-        <script>
-          const rediumBuild = [
-            {
-              title: "Llama2 Training",
-              name: "Training Llama-2 7B",
-              content:
-                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-              key: "rb1",
-              awsTime: 32857,
-              awsCost: 1325829,
-              radiumTime: 17414,
-              radiumCost: 522429,
-              radiumTotalTime: 24643,
-              radiumTotalCost: 739286,
-            },
-            {
-              title: "Llama2 Fine Tuning",
-              name: "Fine Tuning Llama-2 7B",
-              content:
-                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-              key: "rb2",
-              awsTime: 39,
-              awsCost: 1580,
-              radiumTime: 18,
-              radiumCost: 544,
-              radiumTotalTime: 29,
-              radiumTotalCost: 868,
-            },
-            {
-              title: "BERT",
-              name: "BERT (Language Model)",
-              content:
-                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-              key: "rb2",
-              awsTime: 114,
-              awsCost: 4681,
-              radiumTime: 54,
-              radiumCost: 1611,
-              radiumTotalTime: 86,
-              radiumTotalCost: 2571,
-            },
-            {
-              title: "I3D",
-              name: "3D video Model",
-              content:
-                "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
-              key: "rb2",
-              awsTime: 460,
-              awsCost: 18842,
-              radiumTime: 216,
-              radiumCost: 6486,
-              radiumTotalTime: 345,
-              radiumTotalCost: 10350,
-            },
-          ];
-
-          const rediumDeploy = [
-            {
-              title: "Llama2-13B",
-              name: "Llama2-13B",
-              content:
-                "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
-              awsCost: 7500,
-              awsPrice: 0.75,
-              radiumCost: 2000,
-              radiumPrice: 0.2,
-            },
-            {
-              title: "Llama2–70B",
-              name: "Llama2–70B",
-              content:
-                "Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. Radium is cheaper for inference across a variety of common model sizes and token rates:",
-              awsCost: 19500,
-              awsPrice: 1.95,
-              radiumCost: 8000,
-              radiumPrice: 0.8,
-            },
-          ];
-
-          let data = rediumBuild;
-          const rediumBuildDiv = document.getElementById("radium-build");
-          const rediumDeployDiv = document.getElementById("radium-deploy");
-          var sliderMultipler = 1;
-          rediumBuildDiv.addEventListener("click", () => {
-            data = rediumBuild;
-            rediumDeployDiv.classList.remove("main-tab-active");
-            rediumBuildDiv.classList.add("main-tab-active");
-            setInit();
-            showSlider(false);
-          });
-
-          rediumDeployDiv.addEventListener("click", () => {
-            data = rediumDeploy;
-            rediumBuildDiv.classList.remove("main-tab-active");
-            rediumDeployDiv.classList.add("main-tab-active");
-            setInit();
-            showSlider(true);
-          });
-
-          function numberWithCommas(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          }
-
-          const showGraph = (item) => {
-            const awsWidth =
-              (item.awsCost * 600) / (item.awsCost + item.radiumCost);
-            const radiumWidth =
-              (item.radiumCost * 600) / (item.awsCost + item.radiumCost);
-            const radiumTotalWidth = item.radiumTotalCost
-              ? (item.radiumTotalCost * 600) /
-                (item.awsCost + item.radiumTotalCost)
-              : radiumWidth;
-
-            var svgCode = `
-                   <svg
-              viewBox="0 0 721 343"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <rect width="721" height="343" fill="#1C1E2A" />
-              <rect x="76.5" y="157.5" width="${radiumWidth}" height="29" fill="white" />
-              <rect x="76.5" y="157.5" width="${radiumWidth}" height="29" stroke="white" />
-              <rect
-                x="${76 + radiumWidth}"
-            y="157.5"
-            width="${radiumTotalWidth - radiumWidth}"
-            height="30"
-            stroke="white"
-            stroke-width="2"
-            stroke-linejoin="round"
-            stroke-dasharray="4 4"
-          />
-              <text
-                x="${radiumTotalWidth + 76.5 + 25}"
-                y="157.5"
-                fill="white"
-                style="
-                  stylename: Body 2 / Medium/Desktop;
-                  font-family: Ppneuemontreal, sans-serif;
-                  font-size: 20px;
-                  font-weight: 500;
-                  line-height: 30px;
-                  letter-spacing: -0.01em;
-                  text-align: left;
-                "
-              >
-                $${numberWithCommas(item.radiumCost * sliderMultipler)} ${
-              item.radiumTotalCost
-                ? ` - $${numberWithCommas(item.radiumTotalCost)}`
-                : ""
-            }
-              </text>
-              <text
-                x="${radiumTotalWidth + 76.5 + 25}"
-                y="181.5"
-                fill="white"
-                style="
-                  stylename: Body 4 / Regular/Desktop;
-                  font-family: Ppneuemontreal, sans-serif;
-                  font-size: 14px;
-                  font-weight: 400;
-                  line-height: 20px;
-                  letter-spacing: -0.01em;
-                  text-align: left;
-                "
-              >
-                ${
-                  item.radiumPrice
-                    ? `$${item.radiumPrice} / M Tokens`
-                    : `Est. ${item?.radiumTime} ${
-                        item?.radiumTotalTime
-                          ? ` - ${item?.radiumTotalTime}`
-                          : ""
-                      } Node Hours`
-                }
-              </text>
-              <text
-                x="${radiumTotalWidth + 76.5 + 25}"
-                y="205.5"
-                fill="white"
-                style="
-                  stylename: Body 4 / Regular/Desktop;
-                  font-family: Ppneuemontreal, sans-serif;
-                  font-size: 14px;
-                  font-weight: 400;
-                  line-height: 20px;
-                  letter-spacing: -0.01em;
-                  text-align: left;
-                "
-              >
-                ${
-                  item.radiumPrice
-                    ? ""
-                    : `$${(item.radiumCost / item.radiumTime).toFixed(
-                        1
-                      )} per GPU Hour`
-                }
-              </text>
-              <path
-                d="M88.384 145H87.216V133.56H91.696C94.128 133.56 95.456 134.696 95.456 136.792C95.456 138.312 94.576 139.352 93.328 139.672V139.704C95.952 140.232 95.04 144.712 95.664 144.904V145H94.416C93.888 144.52 94.928 140.248 91.872 140.248H88.384V145ZM88.384 139.224H91.408C93.232 139.224 94.288 138.408 94.288 136.808C94.288 135.352 93.456 134.584 91.488 134.584H88.384V139.224ZM99.2744 145.208C97.6424 145.208 96.6024 144.296 96.6024 142.936C96.6024 141.176 97.8504 140.616 99.9624 140.248C101.306 140.008 102.17 139.912 102.17 138.936C102.17 138.104 101.626 137.544 100.314 137.544C98.7304 137.544 98.1704 138.104 98.0904 139.304H96.9864C97.0664 137.864 97.9784 136.632 100.346 136.632C101.85 136.632 103.178 137.272 103.178 139.224V143.304C103.178 143.96 103.274 144.264 103.642 144.264C103.706 144.264 103.77 144.264 103.866 144.248V145C103.69 145.032 103.514 145.064 103.322 145.064C102.634 145.064 102.234 144.792 102.17 143.768H102.138C101.578 144.696 100.602 145.208 99.2744 145.208ZM99.4024 144.296C101.066 144.296 102.17 143.416 102.17 141.944V140.424C101.93 140.76 101.066 140.952 100.09 141.112C98.5064 141.4 97.6904 141.8 97.6904 142.84C97.6904 143.784 98.2184 144.296 99.4024 144.296ZM110.951 138.216V133.56H111.991V145H110.951V143.672H110.919C110.455 144.472 109.591 145.208 108.167 145.208C106.183 145.208 104.583 143.608 104.583 140.92C104.583 138.248 106.183 136.648 108.167 136.648C109.591 136.648 110.439 137.352 110.919 138.216H110.951ZM108.295 144.296C109.863 144.296 110.951 142.984 110.951 140.92C110.951 138.872 109.863 137.56 108.295 137.56C106.599 137.56 105.671 139.096 105.671 140.92C105.671 142.76 106.599 144.296 108.295 144.296ZM114.945 135.208H113.601V133.864H114.945V135.208ZM114.801 145H113.761V136.84H114.801V145ZM121.994 141.992V136.84H123.034V145H121.994V143.848H121.962C121.498 144.52 120.618 145.192 119.162 145.192C117.706 145.192 116.49 144.376 116.49 142.568V136.84H117.53V142.344C117.53 143.384 118.01 144.28 119.418 144.28C120.97 144.28 121.994 143.192 121.994 141.992ZM133.281 136.648C134.833 136.648 135.681 137.576 135.681 139.272V145H134.641V139.496C134.641 138.472 134.401 137.56 133.057 137.56C131.617 137.56 130.769 138.664 130.769 139.848V145H129.729V139.496C129.729 138.472 129.489 137.56 128.129 137.56C126.705 137.56 125.841 138.664 125.841 139.848V145H124.801V136.84H125.841V137.992H125.873C126.305 137.336 127.073 136.648 128.353 136.648C129.505 136.648 130.241 137.176 130.545 138.152H130.577C131.105 137.336 131.985 136.648 133.281 136.648Z"
-                fill="white"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M30 172.5V188H47.1429H64.2857V172.5V157H47.1429H30V172.5ZM63.6807 172.6V187.6H47.1429H30.605V172.6V157.6H47.1429H63.6807V172.6ZM33.6303 176.584V185.2H35.1429H36.6555V181.7V178.2H38.8564H41.0571L41.5738 179.55C41.858 180.293 42.4465 181.845 42.8817 183L43.6729 185.1L45.307 185.158C46.2058 185.19 46.9404 185.19 46.9394 185.158C46.9386 185.126 46.2744 183.436 45.4639 181.402L43.99 177.704L44.81 177.182C46.3999 176.171 46.9412 175.12 46.9412 173.046C46.9412 170.786 45.8654 169.18 43.8484 168.429C43.2006 168.188 41.9357 168.099 38.3193 168.042L33.6303 167.968V176.584ZM42.7194 171.053C43.6869 171.7 44.0444 172.723 43.6867 173.82C43.2097 175.284 42.7127 175.49 39.4651 175.565L36.6555 175.63V173.115V170.6H39.3483C41.8126 170.6 42.0988 170.638 42.7194 171.053ZM52.7074 172.504C51.2087 173.068 50.3336 173.93 49.9654 175.204C49.8089 175.745 49.8222 175.754 51.0129 175.944C52.1421 176.124 52.2294 176.11 52.3823 175.718C52.7455 174.787 53.539 174.323 54.916 174.236C55.7119 174.185 56.468 174.254 56.8504 174.411C57.5117 174.683 58.0336 175.594 58.0336 176.478C58.0336 176.939 57.9515 176.975 56.6723 177.083C51.7468 177.497 49.8339 178.51 49.4519 180.908C49.058 183.382 50.9336 185.385 53.6535 185.396C55.4819 185.402 56.8499 184.674 57.5871 183.3L57.9092 182.7L58.1226 183.9L58.3361 185.1L59.669 185.158L61.0017 185.217L60.9314 182.858C60.8928 181.561 60.8283 179.182 60.7884 177.572C60.7045 174.195 60.4965 173.639 59.0015 172.795C58.2401 172.366 57.8517 172.3 55.8151 172.257C54.1505 172.221 53.2733 172.291 52.7074 172.504ZM57.8922 179.865C57.8202 181.938 56.8136 183.017 54.8176 183.16C53.6906 183.241 53.5734 183.208 52.9997 182.639C51.1503 180.805 53.5571 178.548 57.2269 178.675L57.9328 178.7L57.8922 179.865ZM44.1176 192.34C44.1176 193.071 44.0638 193.227 43.8756 193.04C43.7425 192.908 43.2954 192.8 42.8819 192.8C41.8231 192.8 41.2941 193.5 41.2941 194.9C41.2941 196.3 41.8231 197 42.8819 197C43.2954 197 43.7425 196.892 43.8756 196.76C44.0638 196.573 44.1176 196.573 44.1176 196.76C44.1176 196.892 44.2538 197 44.4202 197C44.6747 197 44.7227 196.556 44.7227 194.2C44.7227 191.844 44.6747 191.4 44.4202 191.4C44.1941 191.4 44.1176 191.638 44.1176 192.34ZM47.7479 191.7C47.7479 191.867 47.9272 192 48.1513 192C48.3753 192 48.5546 191.867 48.5546 191.7C48.5546 191.533 48.3753 191.4 48.1513 191.4C47.9272 191.4 47.7479 191.533 47.7479 191.7ZM30.605 194.9C30.605 196.867 30.6307 197 31.0084 197C31.3751 197 31.4118 196.867 31.4118 195.531C31.4118 194.013 31.5886 193.647 32.4706 193.337C32.9859 193.155 32.902 192.8 32.3439 192.8C32.0749 192.8 31.7254 192.997 31.5477 193.25L31.2313 193.7L31.2206 193.25C31.2145 192.988 31.0836 192.8 30.9076 192.8C30.6579 192.8 30.605 193.167 30.605 194.9ZM35.4288 193.177C35.0598 193.475 34.9976 193.629 35.1731 193.806C35.3498 193.984 35.5059 193.94 35.8286 193.62C36.3299 193.123 37.1058 193.075 37.5487 193.514C38.0824 194.044 37.9379 194.4 37.1897 194.4C35.4649 194.4 34.4307 195.45 35.1235 196.499C35.3889 196.9 35.6208 197 36.2912 197C36.7868 197 37.2783 196.865 37.4967 196.669C37.8399 196.361 37.8655 196.361 37.8655 196.669C37.8655 196.851 38.0017 197 38.1681 197C38.4113 197 38.47 196.696 38.4676 195.45C38.4635 193.312 38.231 192.916 36.9366 192.841C36.1579 192.795 35.8011 192.875 35.4288 193.177ZM47.9496 194.9C47.9496 196.633 48.0024 197 48.2521 197C48.5018 197 48.5546 196.633 48.5546 194.9C48.5546 193.167 48.5018 192.8 48.2521 192.8C48.0024 192.8 47.9496 193.167 47.9496 194.9ZM51.5829 194.35C51.5867 196.345 51.8477 196.88 52.8591 196.963C53.286 196.998 53.7669 196.91 53.9459 196.763C54.1995 196.556 54.2852 196.553 54.3521 196.75C54.3987 196.888 54.5201 197 54.6218 197C54.7236 197 54.8067 196.055 54.8067 194.9C54.8067 193.167 54.7539 192.8 54.5042 192.8C54.2622 192.8 54.2017 193.1 54.2017 194.3C54.2017 195.533 54.1299 195.871 53.7983 196.2C52.845 197.145 52.1849 196.35 52.1849 194.255C52.1849 193.095 52.1236 192.8 51.8824 192.8C51.6391 192.8 51.5804 193.104 51.5829 194.35ZM58.0336 194.9C58.0336 196.633 58.0865 197 58.3361 197C58.5796 197 58.6387 196.69 58.6387 195.411C58.6387 193.996 58.6877 193.789 59.087 193.511C59.6452 193.124 59.7431 193.124 60.1369 193.514C60.3717 193.747 60.4538 194.239 60.4538 195.414C60.4538 196.69 60.5129 197 60.7563 197C60.9977 197 61.0588 196.704 61.0588 195.538C61.0588 194.079 61.2563 193.543 61.8655 193.35C62.0319 193.297 62.3268 193.335 62.521 193.434C62.8151 193.584 62.8739 193.897 62.8739 195.307C62.8739 196.679 62.9314 197 63.1765 197C63.6268 197 63.6141 193.563 63.1622 193.114C62.7217 192.678 61.798 192.722 61.3613 193.2L60.9961 193.6L60.7135 193.2C60.3775 192.724 59.4079 192.666 58.9753 193.095C58.7131 193.355 58.6643 193.355 58.5638 193.095C58.5009 192.933 58.3561 192.8 58.2415 192.8C58.1119 192.8 58.0336 193.591 58.0336 194.9ZM43.6693 193.511C44.284 193.938 44.3119 195.607 43.7143 196.2C43.2369 196.673 42.9223 196.701 42.3915 196.316C41.8268 195.907 41.8268 193.893 42.3915 193.484C42.8906 193.122 43.1157 193.127 43.6693 193.511ZM37.8655 195.273C37.8655 195.716 37.0606 196.6 36.6573 196.6C35.7181 196.6 35.2871 195.837 35.8891 195.24C36.2352 194.897 37.8655 194.924 37.8655 195.273Z"
-                fill="white"
-              />
-              <rect x="76.5" y="60.5" width="${awsWidth}" height="29" fill="black" />
-              <rect x="76.5" y="60.5" width="${awsWidth}" height="29" stroke="white" />
-              <text
-                x="${awsWidth + 76.5 + 25}"
-                y="60.5"
-                fill="white"
-                style="
-                  stylename: Body 2 / Medium/Desktop;
-                  font-family: Ppneuemontreal, sans-serif;
-                  font-size: 20px;
-                  font-weight: 500;
-                  line-height: 30px;
-                  letter-spacing: -0.01em;
-                  text-align: left;
-                "
-              >
-                $${numberWithCommas(item.awsCost * sliderMultipler)}
-              </text>
-              <text
-                x="${awsWidth + 76.5 + 25}"
-                y="84.5"
-                fill="white"
-                style="
-                  stylename: Body 4 / Regular/Desktop;
-                  font-family: Ppneuemontreal, sans-serif;
-                  font-size: 14px;
-                  font-weight: 400;
-                  line-height: 20px;
-                  letter-spacing: -0.01em;
-                  text-align: left;
-                "
-              >
-                  ${
-                    item.awsPrice
-                      ? `$${item.awsPrice} / M Tokens`
-                      : `Est. ${item.awsTime} Node Hours`
-                  }
-
-              </text>
-              <text
-                x="${awsWidth + 76.5 + 25}"
-                y="104.5"
-                fill="white"
-                style="
-                  stylename: Body 4 / Regular/Desktop;
-                  font-family: Ppneuemontreal, sans-serif;
-                  font-size: 14px;
-                  font-weight: 400;
-                  line-height: 20px;
-                  letter-spacing: -0.01em;
-                  text-align: left;
-                "
-              >
-                ${
-                  item.awsPrice
-                    ? ""
-                    : `${(item.awsCost / item.awsTime).toFixed(1)} per GPU Hour`
-                }
-              </text>
-            <image
-              href="https://raw.githubusercontent.com/AbirAbbas/radium-widget/main/aws_icon.png"
-              x="30" y="65"
-              width="34" height="21"
+            <use
+              xlink:href="#image0_1169_14115"
+              transform="matrix(0.000402901 0 0 0.000652316 -0.0157131 0)"
             />
+          </pattern>
+        </defs>
+        <text
+         style="font-size: 14px;"
+         x="50"
+         y="320"
+         fill="white"
+        >
+          Node hours are estimated. Costs based on publicly available information at time of website publication.
+        </text>
+      </svg>
+     `;
+      // Select the graph div
 
-              <path
-                d="M87.344 48H86.144L90.416 36.56H91.728L96.032 48H94.784L93.632 44.832H88.496L87.344 48ZM91.056 37.664L88.88 43.792H93.264L91.088 37.664H91.056ZM99.8033 48H98.5233L95.6433 36.56H96.8753L99.2113 46.336H99.2433L101.931 36.56H103.227L105.915 46.336H105.963L108.299 36.56H109.515L106.651 48H105.355L102.603 37.936H102.555L99.8033 48ZM114.711 48.208C111.959 48.208 109.975 46.784 109.815 44.208H111.031C111.191 45.984 112.279 47.184 114.663 47.184C116.775 47.184 117.495 46.176 117.495 44.912C117.511 43.216 116.327 42.928 113.975 42.4C112.103 41.968 110.295 41.392 110.295 39.296C110.295 37.472 111.751 36.352 114.103 36.352C116.583 36.352 118.151 37.616 118.327 39.856H117.111C116.919 38.272 116.039 37.376 114.103 37.376C112.423 37.376 111.511 38.064 111.511 39.248C111.511 40.784 112.871 41.104 114.551 41.472C116.903 41.984 118.711 42.56 118.711 44.88C118.711 46.736 117.431 48.208 114.711 48.208Z"
-                fill="white"
-              />
+      var graphDiv = document.getElementById("graph");
 
-              <path d="M76 31L76 216" stroke="white" stroke-width="2" />
-              <defs>
-                <pattern
-                  id="pattern0_1169_14115"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use
-                    xlink:href="#image0_1169_14115"
-                    transform="matrix(0.000402901 0 0 0.000652316 -0.0157131 0)"
-                  />
-                </pattern>
-              </defs>
-              <text
-               style="font-size: 14px;"
-               x="50"
-               y="320"
-               fill="white"
-              >
-                Node hours are estimated. Costs based on publicly available information at time of website publication.
-              </text>
-            </svg>
-           `;
-            // Select the graph div
+      // Insert SVG code into the graph div
+      graphDiv.innerHTML = svgCode;
+    };
+    const subTabClick = (e) => {
+      if (e.target.dataset.subtab) {
+        const subTabs = document.querySelectorAll(".sub-tab");
+        subTabs.forEach((subTab) => {
+          subTab.classList.remove("sub-tab-active");
+        });
+        e.target.classList.add("sub-tab-active");
+        updateContentent(e.target.dataset.subtab);
+      }
+    };
 
-            var graphDiv = document.getElementById("graph");
+    const updateContentent = (title) => {
+      const dataFound = data.find((item) => item.title === title);
+      if (dataFound) {
+        showGraph(dataFound);
+        updateSubContent(dataFound);
+      }
+    };
 
-            // Insert SVG code into the graph div
-            graphDiv.innerHTML = svgCode;
-          };
-          const subTabClick = (e) => {
-            if (e.target.dataset.subtab) {
-              const subTabs = document.querySelectorAll(".sub-tab");
-              subTabs.forEach((subTab) => {
-                subTab.classList.remove("sub-tab-active");
-              });
-              e.target.classList.add("sub-tab-active");
-              updateContentent(e.target.dataset.subtab);
-            }
-          };
+    const updateSubContent = (dataFound) => {
+      var contentDiv = document.getElementById("sub-content");
+      contentDiv.innerHTML = dataFound.content;
+    };
 
-          const updateContentent = (title) => {
-            const dataFound = data.find((item) => item.title === title);
-            if (dataFound) {
-              showGraph(dataFound);
-              updateSubContent(dataFound);
-            }
-          };
+    const displaySubTabs = (title) => {
+      let subTabs = "";
+      data.map((item, index) => {
+        subTabs =
+          subTabs +
+          `<div class="sub-tab ${
+            item.title === title ? "sub-tab-active" : ""
+          }" data-subtab="${item.title}">${item.title}</div>`;
+      });
 
-          const updateSubContent = (dataFound) => {
-            var contentDiv = document.getElementById("sub-content");
-            contentDiv.innerHTML = dataFound.content;
-          };
+      var subTabsDiv = document.getElementById("sub-tabs");
 
-          const displaySubTabs = (title) => {
-            let subTabs = "";
-            data.map((item, index) => {
-              subTabs =
-                subTabs +
-                `<div class="sub-tab ${
-                  item.title === title ? "sub-tab-active" : ""
-                }" data-subtab="${item.title}">${item.title}</div>`;
-            });
+      // Insert SVG code into the graph div
+      subTabsDiv.innerHTML = subTabs;
+      subTabsDiv.addEventListener("click", (e) => subTabClick(e));
+    };
 
-            var subTabsDiv = document.getElementById("sub-tabs");
+    const setInit = () => {
+      showGraph(data[0]);
+      updateSubContent(data[0]);
+      displaySubTabs(data[0]?.title);
+    };
+    setInit();
 
-            // Insert SVG code into the graph div
-            subTabsDiv.innerHTML = subTabs;
-            subTabsDiv.addEventListener("click", (e) => subTabClick(e));
-          };
+    const showSlider = (show = true) => {
+      const sliderContentDiv = document.getElementById("slider-content");
+      const imageTableContent = document.getElementById("image-table");
 
-          const setInit = () => {
-            showGraph(data[0]);
-            updateSubContent(data[0]);
-            displaySubTabs(data[0]?.title);
-          };
-          setInit();
+      if (!show) {
+        sliderContentDiv.innerHTML = "";
+        imageTableContent.innerHTML = "";
+        return;
+      }
 
-          const showSlider = (show = true) => {
-            const sliderContentDiv = document.getElementById("slider-content");
-            const imageTableContent = document.getElementById("image-table");
+      let sliderWidth = "525px";
+      let shrinkSlider = false;
+      const shrinkMultiplier = 0.6;
 
-            if (!show) {
-              sliderContentDiv.innerHTML = "";
-              imageTableContent.innerHTML = "";
-              return;
-            }
+      if (window.innerWidth <= 768) {
+        sliderWidth = "100%";
+        shrinkSlider = true;
+      }
 
-            let sliderWidth = "525px";
-            let shrinkSlider = false;
-            const shrinkMultiplier = 0.7;
+      const svg = `<svg
+          style="width: ${sliderWidth}; height: 45px; ${
+        shrinkSlider ? `zoom: ${shrinkMultiplier};` : ""
+      }"
+          viewBox="0 0 ${sliderWidth} 45"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          id="slider"
+        >
+          <text x="1" y="40" fill="white">10Bn</text>
+          <text x="15" y="16" fill="white" id="circle-tool-tip">
+            10Bn Tokens
+          </text>
+          <rect
+            width="395"
+            height="4"
+            transform="translate(50 32)"
+            fill="white"
+            style="cursor:pointer"
+          />
+          <rect x="50" y="26" width="1" height="16" fill="white" />
+          <rect x="129" y="26" width="1" height="16" fill="white" style="cursor:pointer"  />
+          <rect x="208" y="26" width="1" height="16" fill="white"  style="cursor:pointer" />
+          <rect x="287" y="26" width="1" height="16" fill="white" style="cursor:pointer" />
+          <rect x="366" y="26" width="1" height="16" fill="white" style="cursor:pointer"  />
+          <rect x="444" y="26" width="1" height="16" fill="white" />
+          <text x="458" y="40" fill="white">10 Trillion</text>
+          <circle
+            style="cursor: pointer;"
+            cx="50"
+            cy="34"
+            r="10"
+            fill="#1B01B8"
+            stroke="white"
+            id="circle"
+          />
+        </svg>
+        `;
 
-            if (window.innerWidth <= 768) {
-              sliderWidth = "100%";
-              shrinkSlider = true;
-            }
+      sliderContentDiv.innerHTML = svg;
 
-            const svg = `<svg
-                style="width: ${sliderWidth}; height: 45px; ${
-              shrinkSlider ? `zoom: ${shrinkMultiplier};` : ""
-            }"
-                viewBox="0 0 ${sliderWidth} 45"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                id="slider"
-              >
-                <text x="1" y="40" fill="white">10Bn</text>
-                <text x="82" y="16" fill="white" id="circle-tool-tip">
-                  10Bn Tokens
-                </text>
-                <rect
-                  width="395"
-                  height="4"
-                  transform="translate(38 32)"
-                  fill="white"
-                  style="cursor:pointer"
-                />
-                <rect x="38" y="26" width="1" height="16" fill="white" />
-                <rect x="117" y="26" width="1" height="16" fill="white" style="cursor:pointer"  />
-                <rect x="196" y="26" width="1" height="16" fill="white"  style="cursor:pointer" />
-                <rect x="275" y="26" width="1" height="16" fill="white" style="cursor:pointer" />
-                <rect x="354" y="26" width="1" height="16" fill="white" style="cursor:pointer"  />
-                <rect x="432" y="26" width="1" height="16" fill="white" />
-                <text x="434" y="40" fill="white">10 Trillion</text>
-                <circle
-                  style="cursor: pointer;"
-                  cx="117"
-                  cy="34"
-                  r="10"
-                  fill="#1B01B8"
-                  stroke="white"
-                  id="circle"
-                />
-              </svg>
-              `;
+      let tableDimensions = "height: 176px; width: auto;";
 
-            sliderContentDiv.innerHTML = svg;
+      if (window.innerWidth <= 768) {
+        tableDimensions =
+          "height: auto; width: 100%; margin-bottom: 16px;";
+      }
 
-            let tableDimensions = "height: 176px; width: auto;";
+      imageTableContent.innerHTML = `<img style="${tableDimensions}" src="https://raw.githubusercontent.com/AbirAbbas/radium-widget/main/Frame%201000002670.png" alt="" />`;
 
-            if (window.innerWidth <= 768) {
-              tableDimensions =
-                "height: auto; width: 100%; margin-bottom: 16px;";
-            }
+      const slider = document.getElementById("slider");
+      const circle = document.getElementById("circle");
+      const circleRadius = parseInt(circle.getAttribute("r"));
+      const rects = slider.querySelectorAll("rect");
+      const circleTitle = document.getElementById("circle-tool-tip");
+      const minX = (shrinkSlider ? 50 * shrinkMultiplier : 50) - circleRadius;
+      const maxX = (shrinkSlider ? 444 * shrinkMultiplier : 444) + circleRadius;
 
-            imageTableContent.innerHTML = `<img style="${tableDimensions}" src="https://raw.githubusercontent.com/AbirAbbas/radium-widget/main/Frame%201000002670.png" alt="" />`;
+      const sliderValues = [
+        "10B Tokens",
+        "50B Tokens",
+        "100B Tokens",
+        "1T Tokens",
+        "5T Tokens",
+        "10T Tokens",
+      ];
+      const sliderMultiplers = [
+        1,
+        5,
+        10,
+        100,
+        500,
+        1000,
+      ]
 
-            const slider = document.getElementById("slider");
-            const circle = document.getElementById("circle");
-            const circleRadius = parseInt(circle.getAttribute("r"));
-            const rects = slider.querySelectorAll("rect");
-            const circleTitle = document.getElementById("circle-tool-tip");
-            const minX = shrinkSlider ? 107 * shrinkMultiplier : 107;
-            const maxX = shrinkSlider ? 364 * shrinkMultiplier : 364;
+      let isDragging = false;
 
-            const sliderValues = [
-              "10B Tokens",
-              "100B Tokens",
-              "1T Tokens",
-              "10T Tokens",
-            ];
+      // Function to move the circle to the specified position
+      const moveCircle = (x) => {
+        // Ensure the circle stays within the slider boundaries
+        let newX = Math.min(
+          Math.max(x, minX + circleRadius),
+          maxX - circleRadius
+        );
 
-            let isDragging = false;
+        if (shrinkSlider) newX = newX / shrinkMultiplier;
 
-            slider.addEventListener("click", (event) => {
-              const sliderRect = slider.getBoundingClientRect();
-              const clickX = event.clientX - sliderRect.left;
-              moveCircle(clickX);
-            });
+        // 79 is the distance between each value
+        const newIndex = ((newX - minX - 10) / 79).toFixed(0);
 
-            // Function to move the circle to the specified position
-            const moveCircle = (x) => {
-              // Ensure the circle stays within the slider boundaries
-              let newX = Math.min(
-                Math.max(x, minX + circleRadius),
-                maxX - circleRadius
-              );
+        circle.setAttribute("cx", newX);
+        circleTitle.setAttribute("x", newX - 35);
+        circleTitle.textContent = sliderValues[newIndex];
 
-              if (shrinkSlider) newX = newX / shrinkMultiplier;
+        const prevValue = JSON.parse(JSON.stringify(sliderMultipler));
+        sliderMultipler = sliderMultiplers[newIndex];
 
-              // 79 is the distance between each value
-              const newIndex = ((newX - minX - 10) / 79).toFixed(0);
+        if (prevValue !== sliderMultipler) {
+          const elements =
+            document.getElementsByClassName("sub-tab-active");
+          const element = elements[0];
+          showGraph(
+            data[0].title === element.textContent ? data[0] : data[1]
+          );
+        }
+      };
 
-              circle.setAttribute("cx", newX);
-              circleTitle.setAttribute("x", newX - 35);
-              circleTitle.textContent = sliderValues[newIndex];
+      // Event handler to move the circle to position of the interaction
+      const moveCircleEvent = (event) => {
+          const mouseX = event.clientX || event.touches[0].clientX;
+          const sliderX = slider.getBoundingClientRect().left;
+          const newPosition = mouseX - sliderX;
+          moveCircle(newPosition);
+      };
 
-              const prevValue = JSON.parse(JSON.stringify(sliderMultipler));
-              if (newIndex == 0) {
-                sliderMultipler = 1;
-              } else if (newIndex == 1) {
-                sliderMultipler = 10;
-              } else if (newIndex == 2) {
-                sliderMultipler = 100;
-              } else if (newIndex === 3) {
-                sliderMultipler = 1000;
-              }
+      // Event listener to start dragging the circle
+      const startDrag = (event) => {
+        isDragging = true;
+        moveCircleEvent(event);
+      };
+      slider.addEventListener("mousedown", startDrag);
+      slider.addEventListener("touchstart", startDrag);
 
-              if (prevValue !== sliderMultipler) {
-                const elements =
-                  document.getElementsByClassName("sub-tab-active");
-                const element = elements[0];
-                showGraph(
-                  data[0].title === element.textContent ? data[0] : data[1]
-                );
-              }
-            };
+      // Event listener to stop dragging the circle
+      const endDrag = () => {
+        moveCircleEvent(event);
+        isDragging = false;
+      };
+      document.addEventListener("mouseup", endDrag);
+      document.addEventListener("touchend", endDrag);
 
-            // Event listener to start dragging the circle
-            circle.addEventListener("mousedown", (event) => {
-              isDragging = true;
-            });
+      const onDrag = (event) => {
+        if (isDragging) {
+          moveCircleEvent(event);
+        }
+      }
+      // Event listener to move the circle with the cursor
+      window.document.addEventListener("mousemove", onDrag);
+      window.document.addEventListener("touchmove", onDrag);
 
-            // Event listener to stop dragging the circle
-            document.addEventListener("mouseup", () => {
-              isDragging = false;
-            });
-
-            // Event listener to move the circle with the cursor
-            slider.addEventListener("mousemove", (event) => {
-              if (isDragging) {
-                const mouseX = event.clientX;
-                const sliderX = slider.getBoundingClientRect().left;
-                const newPosition = mouseX - sliderX;
-                moveCircle(newPosition);
-              }
-            });
-
-            // Prevent default behavior to avoid text selection while dragging
-            document.addEventListener("selectstart", (event) => {
-              if (isDragging) {
-                event.preventDefault();
-              }
-            });
-          };
-        </script>
-      </div>
+      // Prevent default behavior to avoid text selection while dragging
+      document.addEventListener("selectstart", (event) => {
+        if (isDragging) {
+          event.preventDefault();
+        }
+      });
+    };
+  </script>
+</div>
