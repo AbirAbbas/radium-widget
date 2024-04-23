@@ -607,8 +607,8 @@
           id="slider"
         >
           <text x="1" y="40" fill="white">10Bn</text>
-          <text x="252" y="16" fill="white" id="circle-tool-tip">
-            1T Tokens
+          <text x="15" y="16" fill="white" id="circle-tool-tip">
+            10Bn Tokens
           </text>
           <rect
             width="395"
@@ -626,7 +626,7 @@
           <text x="458" y="40" fill="white">10 Trillion</text>
           <circle
             style="cursor: pointer;"
-            cx="287"
+            cx="50"
             cy="34"
             r="10"
             fill="#1B01B8"
@@ -742,6 +742,9 @@
           event.preventDefault();
         }
       });
+    
+      // Set the initial position of the circle
+      moveCircle(shrinkSlider ? 287 * shrinkMultiplier : 287);
     };
   </script>
 </div>
