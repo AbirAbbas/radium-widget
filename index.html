@@ -12,10 +12,6 @@
       .sub-tab {
         width: 100%;
       }
-
-      .pricing-calculator {
-        padding: 10px;
-      }
     }
     .sub-tab {
       width: fit-content;
@@ -100,6 +96,9 @@
       .content-left-section,
       .content-right-section {
         width: 100%;
+      }
+      .content-right-section {
+        padding-top: 32px;
       }
       .main-section-content {
         max-width: 95%;
@@ -196,7 +195,7 @@
           ></div>
           <div
             style="
-              display: flex;
+              display: none;
               width: 100%;
               margin-top: 16px;
               justify-content: center;
@@ -206,8 +205,7 @@
           ></div>
           <div
             style="
-              display: flex;
-              display: flex;
+              display: none;
               padding-right: 2vw;
               margin-top: 5vh;
               justify-content: center;
@@ -582,9 +580,12 @@
       const imageTableContent = document.getElementById("image-table");
 
       if (!show) {
-        sliderContentDiv.innerHTML = "";
-        imageTableContent.innerHTML = "";
+        sliderContentDiv.style.display = "none";
+        imageTableContent.style.display = "none";
         return;
+      } else {
+        sliderContentDiv.style.display = "flex";
+        imageTableContent.style.display = "flex";
       }
 
       let sliderWidth = "525px";
@@ -606,8 +607,8 @@
           id="slider"
         >
           <text x="1" y="40" fill="white">10Bn</text>
-          <text x="15" y="16" fill="white" id="circle-tool-tip">
-            10Bn Tokens
+          <text x="252" y="16" fill="white" id="circle-tool-tip">
+            1T Tokens
           </text>
           <rect
             width="395"
@@ -625,7 +626,7 @@
           <text x="458" y="40" fill="white">10 Trillion</text>
           <circle
             style="cursor: pointer;"
-            cx="50"
+            cx="287"
             cy="34"
             r="10"
             fill="#1B01B8"
