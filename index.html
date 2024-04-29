@@ -249,7 +249,7 @@
         title: "BERT",
         name: "BERT (Language Model)",
         content:
-          "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+          "Bidirectional Encoder Representations from Transformers is a language model based on the transformer architecture, notable for its dramatic improvement over previous state of the art models. It was introduced in October 2018 by researchers at Google. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
         key: "rb2",
         awsTime: 114,
         awsCost: 4681,
@@ -262,7 +262,7 @@
         title: "I3D",
         name: "3D video Model",
         content:
-          "LLM based on Llama 2 is a family of pre-trained and fine-tuned Large Language Models released by Meta AI in 2023. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
+          "I3D (Inflated 3D Networks) is a widely adopted 3D video classification network. It uses 3D convolution to learn spatiotemporal information directly from videos. I3D is proposed to improve C3D (Convolutional 3D Networks) by inflating from 2D models. <br/><br/>On Radium GPU-8AX vs. AWS p4de.24xlarge (80GB), there has been observed efficiency gains from 25-50%:",
         key: "rb2",
         awsTime: 460,
         awsCost: 18842,
@@ -317,7 +317,7 @@
     });
 
     function numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return x ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : '';
     }
 
     const showGraph = (item) => {
@@ -387,9 +387,9 @@
           ${
             item.radiumPrice
               ? `$${item.radiumPrice} / M Tokens`
-              : `Est. ${item?.radiumTime} ${
-                  item?.radiumTotalTime
-                    ? ` - ${item?.radiumTotalTime}`
+              : `Est. ${numberWithCommas(item?.radiumTime)} ${
+                numberWithCommas(item?.radiumTotalTime)
+                    ? ` - ${numberWithCommas(item?.radiumTotalTime)}`
                     : ""
                 } Node Hours`
           }
@@ -411,9 +411,7 @@
           ${
             item.radiumPrice
               ? ""
-              : `$${(item.radiumCost / item.radiumTime).toFixed(
-                  1
-                )} per GPU Hour`
+              : `$3.75 per GPU Hour`
           }
         </text>
         <path
@@ -461,7 +459,7 @@
             ${
               item.awsPrice
                 ? `$${item.awsPrice} / M Tokens`
-                : `Est. ${item.awsTime} Node Hours`
+                : `Est. ${numberWithCommas(item.awsTime)} Node Hours`
             }
 
         </text>
@@ -482,7 +480,7 @@
           ${
             item.awsPrice
               ? ""
-              : `${(item.awsCost / item.awsTime).toFixed(1)} per GPU Hour`
+              : `$5.12 per GPU Hour`
           }
         </text>
       <image
